@@ -593,13 +593,6 @@
 
 
 
-using System.Globalization;
-
-int[] a = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
-
-int[] c = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
-
-int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 //int[] insertionSort(int[] A)
@@ -746,33 +739,85 @@ int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 
+//int[] bubble(int[] A)
+//{
+
+//    for (int i = 0; i < A.Length; i++)
+//    {
+//        for (int j = 0; j < A.Length; j++)
+//        {
+//            if (A[j] > A[i])
+//            {
+//                int temp = A[i];
+//                A[i] = A[j];
+//                A[j] = temp;
+//            }
+//        }
+//    }
+//    return A;
+//}
+
+//int[] bb = bubble(a);
+
+
+//for (int i = 0; i < a.Length; i++)
+//{
+//    Console.WriteLine(bb[i]);
+//}
+
+
+int[] a = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
+
+int[] c = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
+
+int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 
 
 
+//int linearSearch(int[] A, int key)
+//{
+//    for (int i = 0; i < A.Length; i++)
+//    {
+//        if (A[i] == key)
+//        {
+//            return i;
+//        }
+//    }
+
+
+//    return -1;
+//}
+
+
+//Console.WriteLine(linearSearch(a, 8));
 
 
 
+int binarySearch(int[] A, int key)
+{
+    int left = 0;
+    int right = A.Length - 1;
+    int mid = (left + right) / 2;
+
+    while (left <= right)
+    {
+        if (A[mid] == key)
+            return mid;
+        else if (A[mid] < key)
+            right = mid - 1;
+        else if (A[mid] > key)
+            left = mid + 1;
+        mid++;
+    }
 
 
+    return -1;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Console.WriteLine(binarySearch(b,10));
 
 
 
