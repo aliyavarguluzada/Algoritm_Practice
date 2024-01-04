@@ -912,14 +912,43 @@ int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 
+int[] selectionSort(int[] A)
+{
+
+    for (int i = 0; i < A.Length; i++)
+    {
+        int position = i;
+
+        for (int j = i + 1; j < A.Length; j++)
+        {
+            if (A[j] < A[position])
+            {
+                position = j;
+            }
+        }
+        int temp = A[i];
+        A[i] = A[position];
+        A[position] = temp;
+    }
+
+
+
+
+    return A;
+}
 
 
 
 
 
 
+int[] select = selectionSort(a);
 
 
+for (int i = 0; i < select.Length; i++)
+{
+    Console.WriteLine(select[i]);
+}
 
 
 
