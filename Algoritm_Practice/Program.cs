@@ -766,11 +766,6 @@
 //}
 
 
-int[] a = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
-
-int[] c = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
-
-int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 
@@ -795,29 +790,148 @@ int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 
-int binarySearch(int[] A, int key)
-{
-    int left = 0;
-    int right = A.Length - 1;
-    int mid = (left + right) / 2;
+//int binarySearch(int[] A, int key)
+//{
+//    int left = 0;
+//    int right = A.Length - 1;
+//    int mid = (left + right) / 2;
 
-    while (left <= right)
-    {
-        if (A[mid] == key)
-            return mid;
-        else if (A[mid] < key)
-            right = mid - 1;
-        else if (A[mid] > key)
-            left = mid + 1;
-        mid++;
-    }
-
-
-    return -1;
-}
+//    while (left <= right)
+//    {
+//        if (A[mid] == key)
+//            return mid;
+//        else if (A[mid] < key)
+//            right = mid - 1;
+//        else if (A[mid] > key)
+//            left = mid + 1;
+//        mid++;
+//    }
 
 
-Console.WriteLine(binarySearch(b,10));
+//    return -1;
+//}
+
+
+//Console.WriteLine(binarySearch(b,10));
+
+
+
+
+
+
+
+
+//int[] bubbleSort(int[] A)
+//{
+//    for (int i = 0; i < A.Length; i++)
+//    {
+//        for (int j = 0; j < A.Length; j++)
+//        {
+//            if (A[i] < A[j])
+//            {
+//                int temp = A[i];
+//                A[i] = A[j];
+//                A[j] = temp;
+//            }
+//        }
+//    }
+
+
+
+//    return A;
+//}
+//int[] sorted = bubbleSort(a);
+
+//for (int i = 0; i < sorted.Length; i++)
+//{
+//    Console.WriteLine(sorted[i]);
+//}
+
+
+
+
+
+
+
+
+//int[] insertionSort(int[] A)
+//{
+
+//    for (int i = 1; i < A.Length; i++)
+//    {
+//        int temp = A[i];
+//        int position = i;
+//        while (position > 0 && A[position - 1] > temp)
+//        {
+//            A[position] = A[position - 1];
+//            position--;
+//        }
+//        A[position] = temp;
+//    }
+//    return A;
+//}
+
+//int[] ax = insertionSort(a);
+
+//for (int i = 0; i < ax.Length; i++)
+//{
+//    Console.WriteLine(ax[i]);
+//}
+
+
+//int[] insert(int[] A)
+//{
+//    for (int i = 1; i < A.Length; i++)
+//    {
+//        int temp = A[i];
+
+//        int position = i;
+
+
+//        while (position > 0 && A[position - 1] > temp)
+//        {
+//            A[position] = A[position - 1];
+//            position--;
+//        }
+//        A[position] = temp;
+//    }
+
+//    return A;
+//}
+
+
+
+
+
+int[] a = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
+
+int[] c = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
+
+int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
