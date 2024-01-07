@@ -981,16 +981,46 @@ int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 //}
 
 
+//valid parantheses
 
 
 
 
 
+int[] shellSort(int[] A)
+{
+    int gap = A.Length / 2;
+
+    while (gap > 0)
+    {
+        int i = gap;
+        while (i < A.Length)
+        {
+            int temp = A[i];
+            int j = i - gap;
+
+            while (j >= 0 && A[j] > temp)
+            {
+                A[j + gap] = A[j];
+                j = j - gap;
+            }
+            A[j + gap] = temp;
+            i++;
+        }
+        gap = gap / 2;
+    }
 
 
+    return A;
+}
 
 
+int[] result = shellSort(a);
 
+for (int i = 0; i < result.Length; i++)
+{
+    Console.WriteLine(result[i]);
+}
 
 
 
