@@ -903,6 +903,54 @@
 
 
 
+
+
+
+
+//int[] selectionSort(int[] A)
+//{
+
+//    for (int i = 0; i < A.Length; i++)
+//    {
+//        int position = i;
+
+//        for (int j = i + 1; j < A.Length; j++)
+//        {
+//            if (A[j] < A[position])
+//            {
+//                position = j;
+//            }
+//        }
+//        int temp = A[i];
+//        A[i] = A[position];
+//        A[position] = temp;
+//    }
+
+
+
+
+//    return A;
+//}
+
+
+
+
+
+
+//int[] select = selectionSort(a);
+
+
+//for (int i = 0; i < select.Length; i++)
+//{
+//    Console.WriteLine(select[i]);
+//}
+
+
+
+
+
+
+
 int[] a = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
 
 int[] c = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
@@ -911,55 +959,26 @@ int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 
+//int[] twoSum(int[] nums, int target)
+//{
 
-int[] selectionSort(int[] A)
-{
+//    Dictionary<int, int> indexes = new Dictionary<int, int>();
 
-    for (int i = 0; i < A.Length; i++)
-    {
-        int position = i;
+//    for (int i = 0; i < nums.Length; i++)
+//    {
+//        int comp = target - nums[i];
 
-        for (int j = i + 1; j < A.Length; j++)
-        {
-            if (A[j] < A[position])
-            {
-                position = j;
-            }
-        }
-        int temp = A[i];
-        A[i] = A[position];
-        A[position] = temp;
-    }
+//        if (indexes.ContainsKey(comp))
+//        {
+//            return new int[] { comp };
+//        }
+//    }
 
 
 
 
-    return A;
-}
-
-
-
-
-
-
-int[] select = selectionSort(a);
-
-
-for (int i = 0; i < select.Length; i++)
-{
-    Console.WriteLine(select[i]);
-}
-
-
-
-
-
-
-
-
-
-
-
+//    return new int[0];
+//}
 
 
 
