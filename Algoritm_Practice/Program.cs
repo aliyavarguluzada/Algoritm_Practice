@@ -951,11 +951,6 @@
 
 
 
-int[] a = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
-
-int[] c = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
-
-int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 
@@ -987,44 +982,60 @@ int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 
-int[] shellSort(int[] A)
+//int[] shellSort(int[] A)
+//{
+//    int gap = A.Length / 2;
+
+//    while (gap > 0)
+//    {
+//        int i = gap;
+//        while (i < A.Length)
+//        {
+//            int temp = A[i];
+//            int j = i - gap;
+
+//            while (j >= 0 && A[j] > temp)
+//            {
+//                A[j + gap] = A[j];
+//                j = j - gap;
+//            }
+//            A[j + gap] = temp;
+//            i++;
+//        }
+//        gap = gap / 2;
+//    }
+
+
+//    return A;
+//}
+
+
+//int[] result = shellSort(a);
+
+//for (int i = 0; i < result.Length; i++)
+//{
+//    Console.WriteLine(result[i]);
+//}
+
+int[] a = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
+
+int[] c = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
+
+int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+
+int[] newArr = new int[20];
+
+
+for (int i = 0; i < 20; i++)
 {
-    int gap = A.Length / 2;
-
-    while (gap > 0)
-    {
-        int i = gap;
-        while (i < A.Length)
-        {
-            int temp = A[i];
-            int j = i - gap;
-
-            while (j >= 0 && A[j] > temp)
-            {
-                A[j + gap] = A[j];
-                j = j - gap;
-            }
-            A[j + gap] = temp;
-            i++;
-        }
-        gap = gap / 2;
-    }
-
-
-    return A;
+    newArr[i] = i;
 }
 
-
-int[] result = shellSort(a);
-
-for (int i = 0; i < result.Length; i++)
+for(int i = 0; i < newArr.Length; i++)
 {
-    Console.WriteLine(result[i]);
+    Console.WriteLine(newArr[i]);
 }
-
-
-
-
 
 
 
