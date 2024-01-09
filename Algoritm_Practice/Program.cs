@@ -1024,20 +1024,52 @@ int[] c = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
 int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
-int[] newArr = new int[20];
+//int[] newArr = new int[20];
 
 
-for (int i = 0; i < 20; i++)
+//for (int i = 0; i < 20; i++)
+//{
+//    newArr[i] = i;
+//}
+
+//for(int i = 0; i < newArr.Length; i++)
+//{
+//    Console.WriteLine(newArr[i]);
+//}
+
+
+
+List<int> compareTriplets(List<int> a, List<int> b)
 {
-    newArr[i] = i;
+    List<int> score = new List<int>();
+    int bob = 0;
+    int alice = 0;
+    for (int i = 0; i < a.Count; i++)
+    {
+        if (a[i] > b[i])
+        {
+            alice++;
+        }
+        else if (a[i] < b[i])
+        {
+            bob++;
+        }
+
+    }
+    score.Add(alice);
+    score.Add(bob);
+
+    return score;
+
 }
 
-for(int i = 0; i < newArr.Length; i++)
+List<int> alice = [ 2, 2, 4 ];
+List<int> bob = [ 1, 1, 5 ];
+
+
+List<int> neww = compareTriplets(alice, bob);
+
+foreach (int item in neww)
 {
-    Console.WriteLine(newArr[i]);
+    Console.WriteLine(item);
 }
-
-
-
-
-
