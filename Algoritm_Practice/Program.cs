@@ -1017,6 +1017,8 @@
 //    Console.WriteLine(result[i]);
 //}
 
+using System.Numerics;
+
 int[] a = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
 
 int[] c = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
@@ -1039,37 +1041,72 @@ int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 
-List<int> compareTriplets(List<int> a, List<int> b)
+//List<int> compareTriplets(List<int> a, List<int> b)
+//{
+//    List<int> score = new List<int>();
+//    int bob = 0;
+//    int alice = 0;
+//    for (int i = 0; i < a.Count; i++)
+//    {
+//        if (a[i] > b[i])
+//        {
+//            alice++;
+//        }
+//        else if (a[i] < b[i])
+//        {
+//            bob++;
+//        }
+
+//    }
+//    score.Add(alice);
+//    score.Add(bob);
+
+//    return score;
+
+//}
+
+//List<int> alice = [ 2, 2, 4 ];
+//List<int> bob = [ 1, 1, 5 ];
+
+
+//List<int> neww = compareTriplets(alice, bob);
+
+//foreach (int item in neww)
+//{
+//    Console.WriteLine(item);
+//}
+
+
+//Matrix
+
+List<List<int>> matrix = new List<List<int>> {
+                 new List<int> { 11, 2, 4 },
+                 new List<int> { 4, 5, 6 },
+                 new List<int> { 10, 8, -12 }
+                };
+
+
+int diagonalDifference(List<List<int>> arr)
 {
-    List<int> score = new List<int>();
-    int bob = 0;
-    int alice = 0;
-    for (int i = 0; i < a.Count; i++)
+    int sum_1 = 0;
+    int sum_2 = 0;
+    int result = 0;
+    arr.ToArray<List<int>>();
+
+
+    for (int i = 0; i < arr.Count; i++)
     {
-        if (a[i] > b[i])
-        {
-            alice++;
-        }
-        else if (a[i] < b[i])
-        {
-            bob++;
-        }
+
+        sum_1 = arr[i][i];
+        sum_2 = arr[i][arr.Count - 1 - i];
 
     }
-    score.Add(alice);
-    score.Add(bob);
 
-    return score;
 
+    result = Math.Abs(sum_1 - sum_2);
+
+    return result;
 }
+int res = diagonalDifference(matrix);
 
-List<int> alice = [ 2, 2, 4 ];
-List<int> bob = [ 1, 1, 5 ];
-
-
-List<int> neww = compareTriplets(alice, bob);
-
-foreach (int item in neww)
-{
-    Console.WriteLine(item);
-}
+Console.WriteLine(res);
