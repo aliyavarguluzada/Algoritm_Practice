@@ -1018,6 +1018,7 @@
 //}
 
 using System.Numerics;
+using System.Text;
 
 int[] a = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
 
@@ -1153,9 +1154,24 @@ int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 
+void staircase(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
+            Console.Write(" ");
+        }
+        for (int k = 1; k <= i; k++)
+        {
+            Console.Write("#");
+        }
+        Console.WriteLine();
+    }
 
+}
 
-
+staircase(4);
 
 
 
