@@ -1111,44 +1111,44 @@ int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 //Console.WriteLine(res);
 
-List<int> array = [1, 1, 0, -1, -1];
+//List<int> array = [1, 1, 0, -1, -1];
 
-void plusMinus(List<int> arr)
-{
-    int n = arr.Count;
-    int count_1 = 0;
-    int count_2 = 0;
-    int count_3 = 0;
+//void plusMinus(List<int> arr)
+//{
+//    int n = arr.Count;
+//    int count_1 = 0;
+//    int count_2 = 0;
+//    int count_3 = 0;
 
-    decimal result_1 = 0;
-    decimal result_2 = 0;
-    decimal result_3 = 0;
+//    decimal result_1 = 0;
+//    decimal result_2 = 0;
+//    decimal result_3 = 0;
 
-    for (int i = 0; i < arr.Count; i++)
-    {
+//    for (int i = 0; i < arr.Count; i++)
+//    {
 
-        if (arr[i] == 0)
-            count_1++;
+//        if (arr[i] == 0)
+//            count_1++;
 
-        if (arr[i] < 0)
-            count_2++;
+//        if (arr[i] < 0)
+//            count_2++;
 
-        if (arr[i] > 0)
-            count_3++;
-
-
-    }
-    result_1 = (decimal)count_1 / n;
-    result_2 = (decimal)count_2 / n;
-    result_3 = (decimal)count_3 / n;
-
-    Console.WriteLine(result_1);
-    Console.WriteLine(result_2);
-    Console.WriteLine(result_3);
-}
+//        if (arr[i] > 0)
+//            count_3++;
 
 
-plusMinus(array);
+//    }
+//    result_1 = (decimal)count_1 / n;
+//    result_2 = (decimal)count_2 / n;
+//    result_3 = (decimal)count_3 / n;
+
+//    Console.WriteLine(result_1);
+//    Console.WriteLine(result_2);
+//    Console.WriteLine(result_3);
+//}
+
+
+//plusMinus(array);
 
 
 
