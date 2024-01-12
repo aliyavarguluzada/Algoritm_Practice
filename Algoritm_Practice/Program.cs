@@ -1120,9 +1120,9 @@ void plusMinus(List<int> arr)
     int count_2 = 0;
     int count_3 = 0;
 
-    float result_1 = 0;
-    float result_2 = 0;
-    float result_3 = 0;
+    decimal result_1 = 0;
+    decimal result_2 = 0;
+    decimal result_3 = 0;
 
     for (int i = 0; i < arr.Count; i++)
     {
@@ -1138,9 +1138,9 @@ void plusMinus(List<int> arr)
 
 
     }
-    result_1 = (float)count_1 / n;
-    result_2 = (float)count_2 / n;
-    result_3 = (float)count_3 / n;
+    result_1 = (decimal)count_1 / n;
+    result_2 = (decimal)count_2 / n;
+    result_3 = (decimal)count_3 / n;
 
     Console.WriteLine(result_1);
     Console.WriteLine(result_2);
