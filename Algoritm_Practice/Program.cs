@@ -1079,34 +1079,111 @@ int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 //Matrix
 
-List<List<int>> matrix = new List<List<int>> {
-                 new List<int> { 11, 2, 4 },
-                 new List<int> { 4, 5, 6 },
-                 new List<int> { 10, 8, -12 }
-                };
+//List<List<int>> matrix = new List<List<int>> {
+//                 new List<int> { 11, 2, 4 },
+//                 new List<int> { 4, 5, 6 },
+//                 new List<int> { 10, 8, -12 }
+//                };
 
 
-int diagonalDifference(List<List<int>> arr)
+//int diagonalDifference(List<List<int>> arr)
+//{
+//    int sum_1 = 0;
+//    int sum_2 = 0;
+//    int result = 0;
+//    arr.ToArray<List<int>>();
+
+
+//    for (int i = 0; i < arr.Count; i++)
+//    {
+
+//        sum_1 = arr[i][i];
+//        sum_2 = arr[i][arr.Count - 1 - i];
+
+//    }
+
+
+//    result = Math.Abs(sum_1 - sum_2);
+
+//    return result;
+//}
+//int res = diagonalDifference(matrix);
+
+//Console.WriteLine(res);
+
+List<int> array = [1, 1, 0, -1, -1];
+
+void plusMinus(List<int> arr)
 {
-    int sum_1 = 0;
-    int sum_2 = 0;
-    int result = 0;
-    arr.ToArray<List<int>>();
+    int n = arr.Count;
+    int count_1 = 0;
+    int count_2 = 0;
+    int count_3 = 0;
 
+    float result_1 = 0;
+    float result_2 = 0;
+    float result_3 = 0;
 
     for (int i = 0; i < arr.Count; i++)
     {
 
-        sum_1 = arr[i][i];
-        sum_2 = arr[i][arr.Count - 1 - i];
+        if (arr[i] == 0)
+            count_1++;
+
+        if (arr[i] < 0)
+            count_2++;
+
+        if (arr[i] > 0)
+            count_3++;
+
 
     }
+    result_1 = (float)count_1 / n;
+    result_2 = (float)count_2 / n;
+    result_3 = (float)count_3 / n;
 
-
-    result = Math.Abs(sum_1 - sum_2);
-
-    return result;
+    Console.WriteLine(result_1);
+    Console.WriteLine(result_2);
+    Console.WriteLine(result_3);
 }
-int res = diagonalDifference(matrix);
 
-Console.WriteLine(res);
+
+plusMinus(array);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
