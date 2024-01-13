@@ -1154,33 +1154,52 @@ int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 
-void staircase(int n)
+//void staircase(int n)
+//{
+//    for (int i = 1; i <= n; i++)
+//    {
+//        for (int j = 1; j <= n - i; j++)
+//        {
+//            Console.Write(" ");
+//        }
+//        for (int k = 1; k <= i; k++)
+//        {
+//            Console.Write("#");
+//        }
+//        Console.WriteLine();
+//    }
+
+//}
+
+//staircase(4);
+
+
+
+List<int> s = [1, 3, 5, 7, 9];
+void miniMaxSum(List<int> arr)
 {
-    for (int i = 1; i <= n; i++)
+    long result = 0;
+    long minSum = 0;
+    long maxSum = 0;
+
+    for (int i = 0; i < arr.Count; i++)
     {
-        for (int j = 1; j <= n - i; j++)
-        {
-            Console.Write(" ");
-        }
-        for (int k = 1; k <= i; k++)
-        {
-            Console.Write("#");
-        }
-        Console.WriteLine();
+        result += arr[i];
+
+        maxSum = result - arr.Min();
+        minSum = result - arr.Max();
     }
+
+    Console.WriteLine(result);
+
+    Console.WriteLine($"{minSum} {maxSum}");
+
 
 }
 
-staircase(4);
 
 
-
-
-
-
-
-
-
+miniMaxSum(s);
 
 
 
