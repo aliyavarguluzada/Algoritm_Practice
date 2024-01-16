@@ -1175,31 +1175,62 @@ int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 
-List<int> s = [1, 3, 5, 7, 9];
-void miniMaxSum(List<int> arr)
+//List<int> s = [1, 3, 5, 7, 9];
+//void miniMaxSum(List<int> arr)
+//{
+//    long result = 0;
+//    long minSum = 0;
+//    long maxSum = 0;
+
+//    for (int i = 0; i < arr.Count; i++)
+//    {
+//        result += arr[i];
+
+//        maxSum = result - arr.Min();
+//        minSum = result - arr.Max();
+//    }
+
+//    Console.WriteLine(result);
+
+//    Console.WriteLine($"{minSum} {maxSum}");
+
+
+//}
+
+
+
+//miniMaxSum(s);
+
+
+List<int> candles = [2, 3, 2, 4, 4];
+
+int birthdayCakeCandles(List<int> candles)
 {
-    long result = 0;
-    long minSum = 0;
-    long maxSum = 0;
+    int tallestCandles = 0;
 
-    for (int i = 0; i < arr.Count; i++)
-    {
-        result += arr[i];
+    int tallestCandle = candles.Max();
 
-        maxSum = result - arr.Min();
-        minSum = result - arr.Max();
-    }
+    tallestCandles = candles.Count(c => c == tallestCandle);
+    Console.WriteLine(tallestCandle);
 
-    Console.WriteLine(result);
-
-    Console.WriteLine($"{minSum} {maxSum}");
-
-
+    Console.WriteLine(tallestCandles);
+    return tallestCandles;
 }
 
 
+birthdayCakeCandles(candles);
 
-miniMaxSum(s);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
