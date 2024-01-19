@@ -1018,6 +1018,7 @@
 //}
 
 using System.Numerics;
+using System.Security.Cryptography;
 using System.Text;
 
 int[] a = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
@@ -1202,35 +1203,53 @@ int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 //miniMaxSum(s);
 
 
-List<int> candles = [2, 3, 2, 4, 4];
+//List<int> candles = [2, 3, 2, 4, 4];
 
-int birthdayCakeCandles(List<int> candles)
+//int birthdayCakeCandles(List<int> candles)
+//{
+//    int tallestCandles = 0;
+
+//    int tallestCandle = candles.Max();
+
+//    tallestCandles = candles.Count(c => c == tallestCandle);
+//    Console.WriteLine(tallestCandle);
+
+//    Console.WriteLine(tallestCandles);
+//    return tallestCandles;
+//}
+
+
+//birthdayCakeCandles(candles);
+
+
+string time = "07:05:45PM";
+
+string timeConversion(string s)
 {
-    int tallestCandles = 0;
 
-    int tallestCandle = candles.Max();
 
-    tallestCandles = candles.Count(c => c == tallestCandle);
-    Console.WriteLine(tallestCandle);
+    int hours = int.Parse(s.Substring(0, 2));
+    int minutes = int.Parse(s.Substring(3, 2));
+    int seconds = int.Parse(s.Substring(6, 2));
 
-    Console.WriteLine(tallestCandles);
-    return tallestCandles;
+    string amp = s.Substring(8, 2);
+
+    if (amp == "PM" && hours != 12)
+    {
+        hours += 12;
+    }
+    else if (amp == "AM" && hours == 12)
+    {
+        hours = 0;
+    }
+    string result = $"{hours:D2}:{minutes:D2}:{seconds:D2}";
+
+    Console.WriteLine(result);
+
+    return result;
 }
 
-
-birthdayCakeCandles(candles);
-
-
-
-
-
-
-
-
-
-
-
-
+timeConversion(time);
 
 
 
