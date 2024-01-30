@@ -1017,6 +1017,8 @@
 //    Console.WriteLine(result[i]);
 //}
 
+using Algoritm_Practice;
+using System.Buffers;
 using System.Numerics;
 using System.Security.Cryptography;
 using System.Text;
@@ -1224,51 +1226,52 @@ int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 string time = "07:05:45PM";
 
-string timeConversion(string s)
+//string timeConversion(string s)
+//{
+
+
+//    int hours = int.Parse(s.Substring(0, 2));
+//    int minutes = int.Parse(s.Substring(3, 2));
+//    int seconds = int.Parse(s.Substring(6, 2));
+
+//    string amp = s.Substring(8, 2);
+
+//    if (amp == "PM" && hours != 12)
+//    {
+//        hours += 12;
+//    }
+//    else if (amp == "AM" && hours == 12)
+//    {
+//        hours = 0;
+//    }
+//    string result = $"{hours:D2}:{minutes:D2}:{seconds:D2}";
+
+//    Console.WriteLine(result);
+
+//    return result;
+//}
+
+//timeConversion(time);
+
+
+
+
+//Given an array of n integers where every number is repeated except for one, find the unique number. numbers are repeated 2 times
+
+int[] arr = { 1, 2, 1, 3, 2, 3, 5 };
+
+
+int unique(int[] arr)
 {
 
+    int unique = 0;
 
-    int hours = int.Parse(s.Substring(0, 2));
-    int minutes = int.Parse(s.Substring(3, 2));
-    int seconds = int.Parse(s.Substring(6, 2));
-
-    string amp = s.Substring(8, 2);
-
-    if (amp == "PM" && hours != 12)
+    foreach (int i in arr)
     {
-        hours += 12;
+        unique ^= i;
     }
-    else if (amp == "AM" && hours == 12)
-    {
-        hours = 0;
-    }
-    string result = $"{hours:D2}:{minutes:D2}:{seconds:D2}";
-
-    Console.WriteLine(result);
-
-    return result;
+    Console.WriteLine(unique);
+    return unique;
 }
 
-timeConversion(time);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+unique(arr);
