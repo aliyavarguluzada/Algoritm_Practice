@@ -1017,17 +1017,18 @@
 //    Console.WriteLine(result[i]);
 //}
 
-using Algoritm_Practice;
-using System.Buffers;
-using System.Numerics;
-using System.Security.Cryptography;
-using System.Text;
+//using Algoritm_Practice;
+//using System.Buffers;
+//using System.Numerics;
+//using System.Runtime.CompilerServices;
+//using System.Security.Cryptography;
+//using System.Text;
 
-int[] a = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
+//int[] a = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
 
-int[] c = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
+//int[] c = { 3, 2, 6, 4, 8, 5, 10, 9, 1, 7 };
 
-int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 //int[] newArr = new int[20];
@@ -1224,7 +1225,7 @@ int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 //birthdayCakeCandles(candles);
 
 
-string time = "07:05:45PM";
+//string time = "07:05:45PM";
 
 //string timeConversion(string s)
 //{
@@ -1258,20 +1259,108 @@ string time = "07:05:45PM";
 
 //Given an array of n integers where every number is repeated except for one, find the unique number. numbers are repeated 2 times
 
-int[] arr = { 1, 2, 1, 3, 2, 3, 5 };
+//int[] arr = { 1, 2, 1, 3, 2, 3, 5 };
 
 
-int unique(int[] arr)
+//int unique(int[] arr)
+//{
+
+//    int unique = 0;
+
+//    foreach (int i in arr)
+//    {
+//        unique ^= i; // XOR
+//    }
+//    Console.WriteLine(unique);
+//    return unique;
+//}
+
+//unique(arr);
+
+
+
+List<int> arr = [73, 67, 38, 33];
+
+
+List<int> gradingStudents(List<int> grades)
 {
+    List<int> newGrades = new List<int>();
 
-    int unique = 0;
+    bool newCase = false;
 
-    foreach (int i in arr)
+    foreach (int grade in grades)
     {
-        unique ^= i;
+        int round = (int)Math.Ceiling(grade / 5.0) * 5;
+
+        if (grade < 38 || round - grade >= 3)
+        {
+            newGrades.Add(grade);
+        }
+        else
+        {
+            newGrades.Add(round);
+        }
+
     }
-    Console.WriteLine(unique);
-    return unique;
+
+
+    return newGrades;
 }
 
-unique(arr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
