@@ -1279,50 +1279,90 @@
 
 
 
-List<int> arr = [73, 67, 38, 33];
+//List<int> arr = [73, 67, 38, 33];
 
 
-List<int> gradingStudents(List<int> grades)
+//List<int> gradingStudents(List<int> grades)
+//{
+//    List<int> newGrades = new List<int>();
+
+
+//    foreach (int grade in grades)
+//    {
+//        int round = (int)Math.Ceiling(grade / 5.0) * 5;
+
+//        if (grade < 38 || round - grade >= 3)
+//        {
+//            newGrades.Add(grade);
+//        }
+//        else
+//        {
+//            newGrades.Add(round);
+//        }
+
+//    }
+
+
+//    return newGrades;
+//}
+
+
+
+int[,,,] matr = new int[4, 2, 2, 2];
+
+
+int[,] matrix = {   { 1,4,1 },
+                    { 2,4,1 },
+                    { 1,1,1 },
+                    { 2,4,1 },
+                    { 2,4,1 },
+                    { 2,4,1 },
+                    { 2,4,1 },};
+
+
+
+// Usage of ref parameter
+
+int a = 3;
+int b = 4;
+
+int Sum(ref int a, int b)
 {
-    List<int> newGrades = new List<int>();
-
-    bool newCase = false;
-
-    foreach (int grade in grades)
-    {
-        int round = (int)Math.Ceiling(grade / 5.0) * 5;
-
-        if (grade < 38 || round - grade >= 3)
-        {
-            newGrades.Add(grade);
-        }
-        else
-        {
-            newGrades.Add(round);
-        }
-
-    }
-
-
-    return newGrades;
+    a = 6;
+    return a + b;
 }
 
+Sum(ref a, b);
+
+Console.WriteLine(a);
+Console.WriteLine(b);
+
+// Usage of ref parameter
 
 
+// Usage of out parameter 
+
+int GetParts(double n, out double frac)
+{
+    int whole;
+
+    whole = (int)n;
+
+    frac = n - whole;
+
+    return whole;
+}
+
+int i;
+double f;
+
+i = GetParts(10.125, out f);
+
+Console.WriteLine("Integer portion is " + i);
+Console.WriteLine("Fractional part is " + f);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+// Usage of out parameter 
 
 
 
