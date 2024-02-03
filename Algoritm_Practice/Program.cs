@@ -1365,7 +1365,21 @@ Console.WriteLine("Fractional part is " + f);
 // Usage of out parameter 
 
 
+// params
 
+
+
+int TotalMarks(params int[] list)
+{
+    int total = 0;
+    for (int i = 0; i < list.Length; i++)
+        total += list[i];
+    return total;
+}
+
+TotalMarks(2, 24, 2, 2);
+
+// params
 
 
 
