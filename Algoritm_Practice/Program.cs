@@ -1308,78 +1308,194 @@
 
 
 
-int[,,,] matr = new int[4, 2, 2, 2];
+//int[,,,] matr = new int[4, 2, 2, 2];
 
 
-int[,] matrix = {   { 1,4,1 },
-                    { 2,4,1 },
-                    { 1,1,1 },
-                    { 2,4,1 },
-                    { 2,4,1 },
-                    { 2,4,1 },
-                    { 2,4,1 },};
+//int[,] matrix = {   { 1,4,1 },
+//                    { 2,4,1 },
+//                    { 1,1,1 },
+//                    { 2,4,1 },
+//                    { 2,4,1 },
+//                    { 2,4,1 },
+//                    { 2,4,1 },};
 
 
 
-// Usage of ref parameter
+//// Usage of ref parameter
 
-int a = 3;
-int b = 4;
+//int a = 3;
+//int b = 4;
 
-int Sum(ref int a, int b)
+//int Sum(ref int a, int b)
+//{
+//    a = 6;
+//    return a + b;
+//}
+
+//Sum(ref a, b);
+
+//Console.WriteLine(a);
+//Console.WriteLine(b);
+
+//// Usage of ref parameter
+
+
+//// Usage of out parameter 
+
+//int GetParts(double n, out double frac)
+//{
+//    int whole;
+
+//    whole = (int)n;
+
+//    frac = n - whole;
+
+//    return whole;
+//}
+
+//int i;
+//double f;
+
+//i = GetParts(10.125, out f);
+
+//Console.WriteLine("Integer portion is " + i);
+//Console.WriteLine("Fractional part is " + f);
+
+
+//// Usage of out parameter 
+
+
+//// params
+
+
+
+//int TotalMarks(params int[] list)
+//{
+//    int total = 0;
+//    for (int i = 0; i < list.Length; i++)
+//        total += list[i];
+//    return total;
+//}
+
+//TotalMarks(2, 24, 2, 2);
+
+//// params
+
+
+
+//  linearSearch
+
+int[] arr = { 12, 423, 23, 12, 54, 54, 3, 2, 1, 5, 4 };
+
+
+void linearSearch(int[] arr, int num)
 {
-    a = 6;
-    return a + b;
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] == num)
+        {
+            Console.WriteLine("Number found");
+            break;
+        }
+        
+    }
+
 }
-
-Sum(ref a, b);
-
-Console.WriteLine(a);
-Console.WriteLine(b);
-
-// Usage of ref parameter
-
-
-// Usage of out parameter 
-
-int GetParts(double n, out double frac)
-{
-    int whole;
-
-    whole = (int)n;
-
-    frac = n - whole;
-
-    return whole;
-}
-
-int i;
-double f;
-
-i = GetParts(10.125, out f);
-
-Console.WriteLine("Integer portion is " + i);
-Console.WriteLine("Fractional part is " + f);
-
-
-// Usage of out parameter 
-
-
-// params
+linearSearch(arr, 5);
 
 
 
-int TotalMarks(params int[] list)
-{
-    int total = 0;
-    for (int i = 0; i < list.Length; i++)
-        total += list[i];
-    return total;
-}
 
-TotalMarks(2, 24, 2, 2);
 
-// params
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
