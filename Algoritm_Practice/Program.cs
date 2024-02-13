@@ -1470,58 +1470,99 @@
 
 
 
-string[] arr = { "bat", "super", "wonder" };
+//string[] arr = { "bat", "super", "wonder" };
 
 
-int linearSearchStrings(string[] arr, string keyword)
+//int linearSearchStrings(string[] arr, string keyword)
+//{
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+//        //if (arr[i] == keyword)
+//        //{
+//        //    Console.WriteLine("Word found");
+//        //    return i;
+//        //}
+//        if (String.Compare(arr[i],keyword) is 0)
+//        {
+//            Console.WriteLine("Word found");
+//            return i;
+//        }
+//    }
+//    Console.WriteLine("Word not found");
+//    return -1;
+//}
+
+
+
+//linearSearchStrings(arr,"super");
+
+
+
+
+//int[] arr = { 2, 34, 5, 1, 4, 4, 3, 2, 1, 6, 7, 8, 5 };
+
+//int[] SelectionSort(int[] arr)
+//{
+//    int[] sorted = { };
+
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+
+//    }
+
+
+
+//    return sorted;
+//}
+
+
+
+//// stairs
+///
+
+//void stairs(int num)
+//{
+
+//    for (int i = 0; i < num; i++)
+//    {
+//        for (int j = 0; j < i + 1; j++)
+//        {
+//            Console.Write("#");
+
+//        }
+//        Console.WriteLine();
+//    }
+
+//}
+
+//stairs(6);
+
+void stairsBackwards(int num)
 {
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 1; i <= num; i++)
     {
-        //if (arr[i] == keyword)
-        //{
-        //    Console.WriteLine("Word found");
-        //    return i;
-        //}
-        if (String.Compare(arr[i],keyword) is 0)
+
+        for (int k = 1; k <= num - i; k++)
         {
-            Console.WriteLine("Word found");
-            return i;
+            Console.Write(" ");
+
+
         }
+
+        for (int j = 1; j <= i; j++)
+        {
+            Console.Write("#");
+
+        }
+
+        Console.WriteLine();
+
     }
-    Console.WriteLine("Word not found");
-    return -1;
+
 }
 
 
-
-linearSearchStrings(arr,"super");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+stairsBackwards(6);
 
 
 
