@@ -1518,7 +1518,6 @@
 
 
 //// stairs
-///
 
 //void stairs(int num)
 //{
@@ -1537,49 +1536,63 @@
 
 //stairs(6);
 
-void stairsBackwards(int num)
-{
-    for (int i = 1; i <= num; i++)
-    {
+//void stairsBackwards(int num)
+//{
+//    for (int i = 1; i <= num; i++)
+//    {
 
-        for (int k = 1; k <= num - i; k++)
-        {
-            Console.Write(" ");
-
-
-        }
-
-        for (int j = 1; j <= i; j++)
-        {
-            Console.Write("#");
-
-        }
-
-        Console.WriteLine();
-
-    }
-
-}
+//        for (int k = 1; k <= num - i; k++)
+//        {
+//            Console.Write(" ");
 
 
-stairsBackwards(6);
+//        }
+
+//        for (int j = 1; j <= i; j++)
+//        {
+//            Console.Write("#");
+
+//        }
+
+//        Console.WriteLine();
+
+//    }
+
+//}
 
 
+//stairsBackwards(6);
 
 
 
+//void stairsRecursive(int num)
+//{
+//    if (num <= 0)
+//        return;
+//    stairsRecursive(num - 1);
+
+//    for (int i = 0; i < num - 1; i++)
+//    {
+//        Console.Write("#");
+//    }
+//    Console.WriteLine();
+
+//}
+
+
+
+//stairsRecursive(6);
 
 
 
 
+//using Algoritm_Practice;
 
+/////
+//User user = new User();
+//user.Salary = 100F;
 
-
-
-
-
-
-
+//Console.WriteLine(user.Salary);
 
 
 
