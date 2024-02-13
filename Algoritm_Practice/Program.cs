@@ -1385,26 +1385,26 @@
 
 //  linearSearch
 
-int[] arr = { 12, 423, 23, 12, 54, 54, 3, 2, 1, 5, 4 };
+//int[] arr = { 12, 423, 23, 12, 54, 54, 3, 2, 1, 5, 4 };
 
 
-int linearSearch(int[] arr, int num)
-{
+//int linearSearch(int[] arr, int num)
+//{
 
-    for (int i = 0; i < arr.Length; i++)
-    {
-        if (arr[i] == num)
-        {
-            Console.WriteLine("Number found");
-            return 0;
-        }
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+//        if (arr[i] == num)
+//        {
+//            Console.WriteLine("Number found");
+//            return 0;
+//        }
 
-    }
-    Console.WriteLine("Not Found");
-    return -1;
+//    }
+//    Console.WriteLine("Not Found");
+//    return -1;
 
-}
-linearSearch(arr, 533);
+//}
+//linearSearch(arr, 533);
 
 //int[] sortedArr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
@@ -1470,14 +1470,31 @@ linearSearch(arr, 533);
 
 
 
+string[] arr = { "bat", "super", "wonder" };
+
+
+int linearSearchStrings(string[] arr, string keyword)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        //if (arr[i] == keyword)
+        //{
+        //    Console.WriteLine("Word found");
+        //    return i;
+        //}
+        if (String.Compare(arr[i],keyword) is 0)
+        {
+            Console.WriteLine("Word found");
+            return i;
+        }
+    }
+    Console.WriteLine("Word not found");
+    return -1;
+}
 
 
 
-
-
-
-
-
+linearSearchStrings(arr,"super");
 
 
 
