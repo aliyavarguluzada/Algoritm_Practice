@@ -1385,26 +1385,28 @@
 
 //  linearSearch
 
-//int[] arr = { 12, 423, 23, 12, 54, 54, 3, 2, 1, 5, 4 };
+int[] arr = { 12, 423, 23, 12, 54, 54, 3, 2, 1, 5, 4 };
 
 
-//void linearSearch(int[] arr, int num)
-//{
+int linearSearch(int[] arr, int num)
+{
 
-//    for (int i = 0; i < arr.Length; i++)
-//    {
-//        if (arr[i] == num)
-//        {
-//            Console.WriteLine("Number found");
-//            break;
-//        }
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] == num)
+        {
+            Console.WriteLine("Number found");
+            return 0;
+        }
 
-//    }
+    }
+    Console.WriteLine("Not Found");
+    return -1;
 
-//}
-//linearSearch(arr, 5);
+}
+linearSearch(arr, 533);
 
-int[] sortedArr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//int[] sortedArr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 //int binarySearch(int[] arr, int num)
@@ -1439,31 +1441,31 @@ int[] sortedArr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 
-int binary(int[] arr, int num)
-{
-    int left = 0;
-    int right = arr.Length - 1;
+//int binary(int[] arr, int num)
+//{
+//    int left = 0;
+//    int right = arr.Length - 1;
 
-    while (left <= right)
-    {
-        int mid = (left + right) / 2;
+//    while (left <= right)
+//    {
+//        int mid = (left + right) / 2;
 
-        if (num == arr[mid])
-            return mid;
-        else if (num > arr[mid])
-            right = mid - 1;
-        else if (num < arr[mid])
-            left = mid + 1;
-    }
+//        if (num == arr[mid])
+//            return mid;
+//        else if (num > arr[mid])
+//            right = mid - 1;
+//        else if (num < arr[mid])
+//            left = mid + 1;
+//    }
 
-    return -1;
-}
-
-
+//    return -1;
+//}
 
 
 
-binary(sortedArr, 2);
+
+
+//binary(sortedArr, 2);
 
 
 
