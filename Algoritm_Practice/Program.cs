@@ -1597,14 +1597,40 @@
 
 
 
+// Bubble Sort
+
+
+int[] array = { 2, 1, 4, 8, 6, 5, 5, 7, 9 };
+
+void BubbleSort(int[] arr)
+{
+    for (int i = 0; i < arr.Length - 1; i++)
+    {
+        for (int j = i + 1; j < arr.Length; j++)
+        {
+            int temp = arr[i];
+
+            if (arr[i] > arr[j])
+            {
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
 
 
 
+        }
+    }
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.WriteLine(arr[i]);
+    }
 
 
 
+}
 
 
+BubbleSort(array);
 
 
 
