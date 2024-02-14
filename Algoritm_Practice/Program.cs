@@ -1636,22 +1636,110 @@
 
 // Selection Sort
 
+//int[] array = { 2, 1, 4, 8, 6, 5, 5, 7, 9 };
+
+//void SelectionSort(int[] arr)
+//{
+
+
+//    for (int i = 0; i < arr.Length - 1 ; i++)
+//    {
+//        int min_index = arr[i];
+
+
+//        for (int j = i + 1; j < arr.Length - i - 1; j++)
+//        {
+//            if (arr[min_index] > arr[j])
+//            {
+//                arr[min_index] = arr[j];
+//            }
+//        }
+
+//        int temp = arr[min_index];
+//        arr[min_index] = arr[i];
+//        arr[i] = temp;
+
+
+
+
+
+//    }
+
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+//        Console.WriteLine(arr[i]);
+//    }
+
+
+//}
+
+
+//SelectionSort(array);
+
+
+
+
 int[] array = { 2, 1, 4, 8, 6, 5, 5, 7, 9 };
 
-void SelectionSort(int[] arr)
+
+
+
+//void Sel(int[] arr)
+//{
+
+
+//    for (int i = 0; i < arr.Length - 1; i++)
+//    {
+
+//        int min = arr[i];
+
+//        for (int j = i + 1; j < arr.Length; j++)
+//        {
+//            if (arr[min] > arr[j])
+//            {
+//                arr[min] = arr[j];
+//            }
+//        }
+
+//        int temp = arr[min];
+
+//        arr[min] = arr[i];
+//        arr[i] = temp;
+
+
+
+//    }
+
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+//        Console.WriteLine(arr[i]);
+//    }
+
+
+
+
+
+//}
+
+//Sel(array);
+
+
+
+int[] unsortedArray = { 2, 3, 5, 1, 6, 7, 5, 8, 8, 1, 10, 9 };
+
+void select(int[] arr)
 {
 
-
-    for (int i = 0; i < arr.Length -1 ; i++)
+    for (int i = 0; i < arr.Length - 1; i++)
     {
+
         int min_index = arr[i];
 
-
-        for (int j = i + 1; j < arr.Length - i - 1; j++)
+        for (int j = i + 1; j < arr.Length; j++)
         {
             if (arr[min_index] > arr[j])
             {
-                arr[min_index] = arr[j];
+                min_index = j;
             }
         }
 
@@ -1659,11 +1747,9 @@ void SelectionSort(int[] arr)
         arr[min_index] = arr[i];
         arr[i] = temp;
 
-
-
-
-
     }
+
+
 
     for (int i = 0; i < arr.Length; i++)
     {
@@ -1671,10 +1757,72 @@ void SelectionSort(int[] arr)
     }
 
 
+
 }
 
 
-SelectionSort(array);
+
+select(unsortedArray);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
