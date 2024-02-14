@@ -1697,7 +1697,7 @@ int[] array = { 2, 1, 4, 8, 6, 5, 5, 7, 9 };
 //        {
 //            if (arr[min] > arr[j])
 //            {
-//                arr[min] = arr[j];
+//                min = j;
 //            }
 //        }
 
@@ -1725,52 +1725,76 @@ int[] array = { 2, 1, 4, 8, 6, 5, 5, 7, 9 };
 
 
 
+//int[] unsortedArray = { 2, 3, 5, 1, 6, 7, 5, 8, 8, 1, 10, 9 };
+
+//void select(int[] arr)
+//{
+
+//    for (int i = 0; i < arr.Length - 1; i++)
+//    {
+
+//        int min_index = arr[i];
+
+//        for (int j = i + 1; j < arr.Length; j++)
+//        {
+//            if (arr[min_index] > arr[j])
+//            {
+//                min_index = j;
+//            }
+//        }
+
+//        int temp = arr[min_index];
+//        arr[min_index] = arr[i];
+//        arr[i] = temp;
+
+//    }
+
+
+
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+//        Console.WriteLine(arr[i]);
+//    }
+
+
+
+//}
+
+
+
+//select(unsortedArray);
+
+
 int[] unsortedArray = { 2, 3, 5, 1, 6, 7, 5, 8, 8, 1, 10, 9 };
 
-void select(int[] arr)
-{
 
-    for (int i = 0; i < arr.Length - 1; i++)
+void bubble(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
     {
 
-        int min_index = arr[i];
-
-        for (int j = i + 1; j < arr.Length; j++)
+        for (int j = 0; j < arr.Length - i - 1; j++)
         {
-            if (arr[min_index] > arr[j])
+            if (arr[j] > arr[j + 1])
             {
-                min_index = j;
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+
+                // With tuple
+                //(arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
             }
         }
-
-        int temp = arr[min_index];
-        arr[min_index] = arr[i];
-        arr[i] = temp;
-
     }
-
-
 
     for (int i = 0; i < arr.Length; i++)
     {
         Console.WriteLine(arr[i]);
     }
-
-
-
 }
 
 
-
-select(unsortedArray);
-
-
-
-
-
-
-
-
+bubble(unsortedArray);
 
 
 
