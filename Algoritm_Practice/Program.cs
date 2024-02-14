@@ -1765,50 +1765,66 @@ int[] array = { 2, 1, 4, 8, 6, 5, 5, 7, 9 };
 //select(unsortedArray);
 
 
+//int[] unsortedArray = { 2, 3, 5, 1, 6, 7, 5, 8, 8, 1, 10, 9 };
+
+
+//void bubble(int[] arr)
+//{
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+
+//        for (int j = 0; j < arr.Length - i - 1; j++)
+//        {
+//            if (arr[j] > arr[j + 1])
+//            {
+//                int temp = arr[j];
+//                arr[j] = arr[j + 1];
+//                arr[j + 1] = temp;
+
+//                // With tuple
+//                //(arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
+//            }
+//        }
+//    }
+
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+//        Console.WriteLine(arr[i]);
+//    }
+//}
+
+
+//bubble(unsortedArray);
+
+
+
+
+
 int[] unsortedArray = { 2, 3, 5, 1, 6, 7, 5, 8, 8, 1, 10, 9 };
 
 
-void bubble(int[] arr)
+// using  where T : IComparable < T > we can now make array comparable
+void bubble<T>(T[] array) where T : IComparable<T>
 {
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-
-        for (int j = 0; j < arr.Length - i - 1; j++)
+        for (int j = 0; j < array.Length - i - 1; j++)
         {
-            if (arr[j] > arr[j + 1])
+            if (array[j].CompareTo(array[j + 1]) > 0)
             {
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-
-                // With tuple
-                //(arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
+                (array[j], array[j + 1]) = (array[j + 1], array[j]);
             }
+
         }
     }
 
-    for (int i = 0; i < arr.Length; i++)
-    {
-        Console.WriteLine(arr[i]);
-    }
 }
 
 
+
+
 bubble(unsortedArray);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Console.WriteLine(string.Join(",", unsortedArray));
 
 
 
