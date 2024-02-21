@@ -1800,35 +1800,62 @@ int[] array = { 2, 1, 4, 8, 6, 5, 5, 7, 9 };
 
 
 
-int[] unsortedArray = { 2, 3, 5, 1, 6, 7, 5, 8, 8, 1, 10, 9 };
+//int[] unsortedArray = { 2, 3, 5, 1, 6, 7, 5, 8, 8, 1, 10, 9 };
 
 
-// using  where T : IComparable < T > we can now make array comparable
-void bubble<T>(T[] array) where T : IComparable<T>
+//// using  where T : IComparable < T > we can now make array comparable
+//void bubble<T>(T[] array) where T : IComparable<T>
+//{
+//    for (int i = 0; i < array.Length; i++)
+//    {
+//        for (int j = 0; j < array.Length - i - 1; j++)
+//        {
+//            if (array[j].CompareTo(array[j + 1]) > 0)
+//            {
+//                (array[j], array[j + 1]) = (array[j + 1], array[j]);
+//            }
+
+//        }
+//    }
+
+//}
+
+
+
+
+//bubble(unsortedArray);
+//Console.WriteLine(string.Join(",", unsortedArray));
+
+
+
+
+
+void countApplesAndOranges(int s, int t, int a, int b, List<int> apples, List<int> oranges)
 {
-    for (int i = 0; i < array.Length; i++)
+    int appleCount = 0;
+    int orangeCount = 0;
+    foreach (int apple in apples)
     {
-        for (int j = 0; j < array.Length - i - 1; j++)
+        int appleLoc = apple + a;
+        if (appleLoc >= s && appleLoc <= t)
         {
-            if (array[j].CompareTo(array[j + 1]) > 0)
-            {
-                (array[j], array[j + 1]) = (array[j + 1], array[j]);
-            }
-
+            appleCount++;
         }
+
     }
+    foreach (int orange in oranges)
+    {
+        int orangeLoc = orange + b;
+        if (orangeLoc >= s && orangeLoc <= t)
+        {
+            orangeCount++;
+        }
+
+    }
+    Console.WriteLine(appleCount);
+    Console.WriteLine(orangeCount);
 
 }
-
-
-
-
-bubble(unsortedArray);
-Console.WriteLine(string.Join(",", unsortedArray));
-
-
-
-
 
 
 
