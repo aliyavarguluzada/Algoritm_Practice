@@ -1279,32 +1279,7 @@
 
 
 
-//List<int> arr = [73, 67, 38, 33];
 
-
-//List<int> gradingStudents(List<int> grades)
-//{
-//    List<int> newGrades = new List<int>();
-
-
-//    foreach (int grade in grades)
-//    {
-//        int round = (int)Math.Ceiling(grade / 5.0) * 5;
-
-//        if (grade < 38 || round - grade >= 3)
-//        {
-//            newGrades.Add(grade);
-//        }
-//        else
-//        {
-//            newGrades.Add(round);
-//        }
-
-//    }
-
-
-//    return newGrades;
-//}
 
 
 
@@ -1679,6 +1654,8 @@
 
 
 
+using Algoritm_Practice.HackerRank;
+
 int[] array = { 2, 1, 4, 8, 6, 5, 5, 7, 9 };
 
 
@@ -1830,67 +1807,9 @@ int[] array = { 2, 1, 4, 8, 6, 5, 5, 7, 9 };
 
 
 
-void countApplesAndOranges(int s, int t, int a, int b, List<int> apples, List<int> oranges)
-{
-    int appleCount = 0;
-    int orangeCount = 0;
-    foreach (int apple in apples)
-    {
-        int appleLoc = apple + a;
-        if (appleLoc >= s && appleLoc <= t)
-        {
-            appleCount++;
-        }
-
-    }
-    foreach (int orange in oranges)
-    {
-        int orangeLoc = orange + b;
-        if (orangeLoc >= s && orangeLoc <= t)
-        {
-            orangeCount++;
-        }
-
-    }
-    Console.WriteLine(appleCount);
-    Console.WriteLine(orangeCount);
-
-}
-
-
-string kangaroo(int x1, int v1, int x2, int v2)
-{
 
 
 
-    if (x1 > x2)
-        return "NO";
-
-    int s1 = x1 + v1;
-    int s2 = x2 + v2;
-    if (v1 - v2 == 0)
-        return "NO";
-
-    decimal n = (decimal)(s2 - s1) / (v1 - v2);
-
-    if (n >= 0 && n % 1 == 0)
-        return "YES";
-
-
-    if (s1 == s2)
-        return "Yes";
-
-
-
-    return "NO";
-
-}
-
-
-Console.WriteLine(kangaroo(2564, 5393, 5121, 2836));
-//Console.WriteLine(kangaroo(43, 2, 70, 2));
-//Console.WriteLine(kangaroo(21, 6, 47, 3));
-//Console.WriteLine(kangaroo(0, 3, 4, 2));
 
 
 
