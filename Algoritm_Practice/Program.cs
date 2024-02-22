@@ -1091,168 +1091,48 @@
 //                };
 
 
-//int diagonalDifference(List<List<int>> arr)
-//{
-//    int sum_1 = 0;
-//    int sum_2 = 0;
-//    int result = 0;
-//    arr.ToArray<List<int>>();
+int diagonalDifference(List<List<int>> arr)
+{
+    int sum_1 = 0;
+    int sum_2 = 0;
+    int result = 0;
+    arr.ToArray<List<int>>();
 
 
-//    for (int i = 0; i < arr.Count; i++)
-//    {
+    for (int i = 0; i < arr.Count; i++)
+    {
 
-//        sum_1 = arr[i][i];
-//        sum_2 = arr[i][arr.Count - 1 - i];
+        sum_1 = arr[i][i];
+        sum_2 = arr[i][arr.Count - 1 - i];
 
-//    }
-
-
-//    result = Math.Abs(sum_1 - sum_2);
-
-//    return result;
-//}
-//int res = diagonalDifference(matrix);
-
-//Console.WriteLine(res);
-
-//List<int> array = [1, 1, 0, -1, -1];
-
-//void plusMinus(List<int> arr)
-//{
-//    int n = arr.Count;
-//    int count_1 = 0;
-//    int count_2 = 0;
-//    int count_3 = 0;
-
-//    decimal result_1 = 0;
-//    decimal result_2 = 0;
-//    decimal result_3 = 0;
-
-//    for (int i = 0; i < arr.Count; i++)
-//    {
-
-//        if (arr[i] == 0)
-//            count_1++;
-
-//        if (arr[i] < 0)
-//            count_2++;
-
-//        if (arr[i] > 0)
-//            count_3++;
+    }
 
 
-//    }
-//    result_1 = (decimal)count_1 / n;
-//    result_2 = (decimal)count_2 / n;
-//    result_3 = (decimal)count_3 / n;
+    result = Math.Abs(sum_1 - sum_2);
 
-//    Console.WriteLine(result_1);
-//    Console.WriteLine(result_2);
-//    Console.WriteLine(result_3);
-//}
-
-
-//plusMinus(array);
+    return result;
+}
 
 
 
 
-//void staircase(int n)
-//{
-//    for (int i = 1; i <= n; i++)
-//    {
-//        for (int j = 1; j <= n - i; j++)
-//        {
-//            Console.Write(" ");
-//        }
-//        for (int k = 1; k <= i; k++)
-//        {
-//            Console.Write("#");
-//        }
-//        Console.WriteLine();
-//    }
-
-//}
-
-//staircase(4);
 
 
 
-//List<int> s = [1, 3, 5, 7, 9];
-//void miniMaxSum(List<int> arr)
-//{
-//    long result = 0;
-//    long minSum = 0;
-//    long maxSum = 0;
-
-//    for (int i = 0; i < arr.Count; i++)
-//    {
-//        result += arr[i];
-
-//        maxSum = result - arr.Min();
-//        minSum = result - arr.Max();
-//    }
-
-//    Console.WriteLine(result);
-
-//    Console.WriteLine($"{minSum} {maxSum}");
-
-
-//}
 
 
 
-//miniMaxSum(s);
 
 
-//List<int> candles = [2, 3, 2, 4, 4];
-
-//int birthdayCakeCandles(List<int> candles)
-//{
-//    int tallestCandles = 0;
-
-//    int tallestCandle = candles.Max();
-
-//    tallestCandles = candles.Count(c => c == tallestCandle);
-//    Console.WriteLine(tallestCandle);
-
-//    Console.WriteLine(tallestCandles);
-//    return tallestCandles;
-//}
 
 
-//birthdayCakeCandles(candles);
 
 
-//string time = "07:05:45PM";
-
-//string timeConversion(string s)
-//{
 
 
-//    int hours = int.Parse(s.Substring(0, 2));
-//    int minutes = int.Parse(s.Substring(3, 2));
-//    int seconds = int.Parse(s.Substring(6, 2));
 
-//    string amp = s.Substring(8, 2);
 
-//    if (amp == "PM" && hours != 12)
-//    {
-//        hours += 12;
-//    }
-//    else if (amp == "AM" && hours == 12)
-//    {
-//        hours = 0;
-//    }
-//    string result = $"{hours:D2}:{minutes:D2}:{seconds:D2}";
 
-//    Console.WriteLine(result);
-
-//    return result;
-//}
-
-//timeConversion(time);
 
 
 
