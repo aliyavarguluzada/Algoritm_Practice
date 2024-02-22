@@ -1858,11 +1858,39 @@ void countApplesAndOranges(int s, int t, int a, int b, List<int> apples, List<in
 }
 
 
+string kangaroo(int x1, int v1, int x2, int v2)
+{
 
 
 
+    if (x1 > x2)
+        return "NO";
+
+    int s1 = x1 + v1;
+    int s2 = x2 + v2;
+    if (v1 - v2 == 0)
+        return "NO";
+
+    decimal n = (decimal)(s2 - s1) / (v1 - v2);
+
+    if (n >= 0 && n % 1 == 0)
+        return "YES";
 
 
+    if (s1 == s2)
+        return "Yes";
+
+
+
+    return "NO";
+
+}
+
+
+Console.WriteLine(kangaroo(2564, 5393, 5121, 2836));
+//Console.WriteLine(kangaroo(43, 2, 70, 2));
+//Console.WriteLine(kangaroo(21, 6, 47, 3));
+//Console.WriteLine(kangaroo(0, 3, 4, 2));
 
 
 
