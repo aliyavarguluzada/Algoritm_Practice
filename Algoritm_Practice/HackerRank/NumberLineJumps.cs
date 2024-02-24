@@ -11,9 +11,6 @@ namespace Algoritm_Practice.HackerRank
        public string kangaroo(int x1, int v1, int x2, int v2)
         {
 
-
-
-
             int s1 = x1 + v1;
             int s2 = x2 + v2;
             if (v1 - v2 == 0)
