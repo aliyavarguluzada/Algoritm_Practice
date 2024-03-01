@@ -79,10 +79,11 @@
 //int number = Convert.ToInt32(Console.ReadLine());
 //Console.WriteLine("{0} {1}", (int)number / 10, (int)number % 10);
 
-string number1 = Console.ReadLine();
-List<int> arr = new List<int>();
 
 
 
-Console.Write(number1);
 
+using Algoritm_Practice.EOlymp;
+
+Digits digits = new Digits();
+digits.DigitCounter();
