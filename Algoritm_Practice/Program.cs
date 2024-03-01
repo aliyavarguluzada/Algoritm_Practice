@@ -1,1 +1,88 @@
 ﻿
+//using System.Net;
+//using System.Numerics;
+
+//List<List<int>> arr = new List<List<int>>() { new List<int> { 0, 0, 0,},
+//                                                  new List<int> { 0, 0, 0 },
+//                                                  new List<int> { 0, 0, 0 }};
+
+
+//List<int> dynamicArray(int n, List<List<int>> queries)
+//{
+//    List<List<int>> arr = new List<List<int>>(n);
+
+//    int lastAnswer = 0;
+
+
+//    for (int i = 0; i < queries.Count; i++)
+//    {
+
+//    }
+
+
+
+//    return new List<int>() { n };
+//}
+//List<int> rotateLeft(int d, List<int> arr)
+//{
+//    //Dictionary<int, int> keyValuePairs = new Dictionary<int, int>();
+
+//    int n = arr.Count;
+
+//    for (int i = 0; i < n; i++)
+//    {
+//        //keyValuePairs[i] = arr[i];
+
+//        int x = 0;
+
+//        int newIndex = 0;
+
+//        if (i - d < 0)
+//            newIndex = i - d + n;
+//        else
+//            newIndex = i - d;
+
+
+//        (arr[x], arr[newIndex]) = (arr[newIndex], arr[x]);
+
+//        //if (newIndex == i - 1)
+//        //    continue;
+//        //else
+//        //{
+//        //    int temp = arr[newIndex];
+//        //    arr[newIndex] = arr[x];
+//        //    arr[x] = temp;
+
+//        //}
+
+//        //x++;
+//        //if (x == newIndex)
+//        //    x++;
+
+//    }
+
+//    return arr;
+//}
+
+//List<int> ar = [41, 73, 89, 7, 10, 1, 59, 58, 84, 77, 77, 97, 58, 1, 86, 58, 26, 10, 86, 51];
+//List<int> so = [77, 97, 58, 1, 86, 58, 26, 10, 86, 51, 41, 73, 89, 7, 10, 1, 59, 58, 84, 77];
+////              0    1   2  3  4    5   6   7   8   9  10  11 12  13 14  15  16  17  18  19 
+//rotateLeft(10, ar);
+
+//foreach (var item in ar)
+//{
+//    Console.WriteLine(item);
+//}
+
+
+
+//int number = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("{0} {1}", (int)number / 10, (int)number % 10);
+
+string number1 = Console.ReadLine();
+List<int> arr = new List<int>();
+
+
+
+Console.Write(number1);
+
