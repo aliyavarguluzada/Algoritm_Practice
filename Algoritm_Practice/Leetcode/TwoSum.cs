@@ -28,5 +28,21 @@ namespace Algoritm_Practice.Leetcode
             int[] result = l.ToArray();
             return result;
         }
+        public static int[] TwoSumOptimized(int[] nums, int target)
+        {
+            Dictionary<int, int> keyValuePairs = new Dictionary<int, int>();
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int secondNum = target - nums[i];
+
+                if (keyValuePairs.ContainsKey(secondNum))
+                {
+                    return new int[] { keyValuePairs[secondNum], i };
+                }
+
+                keyValuePairs[nums[i]] = i;
+            }
+            return new int[0];
+        }
     }
 }

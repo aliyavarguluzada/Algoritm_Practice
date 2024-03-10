@@ -91,7 +91,7 @@ using Algoritm_Practice.Leetcode;
 
 int[] a = [-1, -2, -3, -4, -5];
 
-int[] s = TwoSum.TwoSumOp(a,-8);
+int[] s = TwoSum.TwoSumOptimized(a,-8);
 
 foreach (var item in s)
 {
