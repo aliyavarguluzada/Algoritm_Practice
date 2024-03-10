@@ -23,41 +23,50 @@
 
 //    return new List<int>() { n };
 //}
+
 //List<int> rotateLeft(int d, List<int> arr)
 //{
-//    //Dictionary<int, int> keyValuePairs = new Dictionary<int, int>();
 
 //    int n = arr.Count;
 
+//    int x = 0;
+
+//    int newIndex = 0;
+
 //    for (int i = 0; i < n; i++)
 //    {
-//        //keyValuePairs[i] = arr[i];
 
-//        int x = 0;
-
-//        int newIndex = 0;
 
 //        if (i - d < 0)
+//        {
 //            newIndex = i - d + n;
+//            (arr[x], arr[newIndex]) = (arr[newIndex], arr[x]);
+
+//        }
 //        else
+//        {
 //            newIndex = i - d;
+//            (arr[x], arr[newIndex]) = (arr[newIndex], arr[x]);
+
+//        }
 
 
-//        (arr[x], arr[newIndex]) = (arr[newIndex], arr[x]);
+//        if (d == n / 2 && x == n / 2)
+//            break;
 
-//        //if (newIndex == i - 1)
-//        //    continue;
-//        //else
-//        //{
-//        //    int temp = arr[newIndex];
-//        //    arr[newIndex] = arr[x];
-//        //    arr[x] = temp;
+//        if (newIndex == x + 1)
+//        {
+//            int xx = x + 2;
+//            if (xx > n-1)
+//                break;
+//            x += 2;
 
-//        //}
+//        }
+//        else
+//            x++;
 
-//        //x++;
-//        //if (x == newIndex)
-//        //    x++;
+
+
 
 //    }
 
@@ -66,24 +75,26 @@
 
 //List<int> ar = [41, 73, 89, 7, 10, 1, 59, 58, 84, 77, 77, 97, 58, 1, 86, 58, 26, 10, 86, 51];
 //List<int> so = [77, 97, 58, 1, 86, 58, 26, 10, 86, 51, 41, 73, 89, 7, 10, 1, 59, 58, 84, 77];
-////              0    1   2  3  4    5   6   7   8   9  10  11 12  13 14  15  16  17  18  19 
-//rotateLeft(10, ar);
+////              0    1   2  3  4    5   6   7   8   9  10  11 12  13 14  15  16  17  18  19
 
-//foreach (var item in ar)
+//List<int> aaa = [98, 67, 35, 1, 74, 79, 7, 26, 54, 63, 24, 17, 32, 81];
+//List<int> bbb = [26, 54, 63, 24, 17, 32, 81, 98, 67, 35, 1, 74, 79, 7];
+//List<int> bb = [1, 2, 3, 4, 5];
+
+//rotateLeft(4, bb);
+
+//foreach (var item in bb)
 //{
 //    Console.WriteLine(item);
 //}
+using Algoritm_Practice.Leetcode;
 
+int[] a = [1, 2, 2, 1];
+int[] b = [2, 2];
 
+int[] aa = IntersectionOfTwoArrays.Intersection(a, b);
 
-//int number = Convert.ToInt32(Console.ReadLine());
-//Console.WriteLine("{0} {1}", (int)number / 10, (int)number % 10);
-
-
-
-
-
-using Algoritm_Practice.EOlymp;
-
-Digits digits = new Digits();
-digits.DigitCounter();
+foreach (var item in aa)
+{
+    Console.WriteLine(item);
+}
