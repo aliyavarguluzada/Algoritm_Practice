@@ -89,12 +89,11 @@
 //}
 using Algoritm_Practice.Leetcode;
 
-int[] a = [1, 2, 2, 1];
-int[] b = [2, 2];
+int[] a = [-1, -2, -3, -4, -5];
 
-int[] aa = IntersectionOfTwoArrays.Intersection(a, b);
+int[] s = TwoSum.TwoSumOp(a,-8);
 
-foreach (var item in aa)
+foreach (var item in s)
 {
     Console.WriteLine(item);
 }
