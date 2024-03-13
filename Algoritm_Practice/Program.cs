@@ -92,6 +92,6 @@ using Algoritm_Practice.GrokkingAlgorithms;
 
 int[] arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+bool a = LinearSearch.linearSearch(arr, 9);
 
-bool a = BinarySearch.binarySearch(arr, 81);
 Console.WriteLine(a);
