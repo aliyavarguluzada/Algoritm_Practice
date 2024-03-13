@@ -87,13 +87,11 @@
 //{
 //    Console.WriteLine(item);
 //}
-using Algoritm_Practice.Leetcode;
 
-int[] a = [-1, -2, -3, -4, -5];
+using Algoritm_Practice.GrokkingAlgorithms;
 
-int[] s = TwoSum.TwoSumOptimized(a,-8);
+int[] arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-foreach (var item in s)
-{
-    Console.WriteLine(item);
-}
+
+bool a = BinarySearch.binarySearch(arr, 81);
+Console.WriteLine(a);
