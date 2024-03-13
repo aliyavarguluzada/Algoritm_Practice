@@ -90,8 +90,13 @@
 
 using Algoritm_Practice.GrokkingAlgorithms;
 
-int[] arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+int[] arr = [2, 4, 1, 5, 6, 3, 2, 1, 6, 7];
 
-bool a = LinearSearch.linearSearch(arr, 9);
+SelectionSort a = new SelectionSort();
+int[] ae = a.selectionSort(arr);
 
-Console.WriteLine(a);
+foreach (int i in ae)
+{
+    Console.WriteLine(i);
+}
+
