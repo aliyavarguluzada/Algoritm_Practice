@@ -67,6 +67,7 @@ int max(int[] arr)
 int aa = max(aa2);
 
 int a =FindMin.min(a2);
-Console.WriteLine(a);
+int b =FindMax.max(a2);
+Console.WriteLine(b);
 
 
