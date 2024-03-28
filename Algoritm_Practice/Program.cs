@@ -40,34 +40,3 @@ bool IsPrime(int number)
 
 
 
-int[] aa2 = [13, 34, 2, 34, 33, 1];
-int[] a2 = [13, 34, 2, 0, 33, -1,-2];
-
-int max(int[] arr)
-{
-    int max = Int32.MinValue;
-    int secondMax = Int32.MinValue;
-
-    for (int i = 0; i < arr.Length - 1; i++)
-    {
-
-        if (max < arr[i])
-        {
-            secondMax = max;
-            max = arr[i];
-        }
-        else if (arr[i] > secondMax && arr[i] != max)
-        {
-            secondMax = arr[i];
-        }
-    }
-    return secondMax;
-}
-
-int aa = max(aa2);
-
-int a =FindMin.min(a2);
-int b =FindMax.max(a2);
-Console.WriteLine(b);
-
-
