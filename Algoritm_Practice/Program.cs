@@ -40,31 +40,8 @@ bool IsPrime(int number)
 
 
 
-//int[] a = [1, 2, 3, 4, 5];
-
-//int[] reverseArray(int[] arr)
-//{
-//    int left = 0;
-//    int right = arr.Length - 1;
-//    while (left < right)
-//    {
-//        (arr[left], arr[right]) = (arr[right], arr[left]);
-//        left++;
-//        right--;
-//    }
-//    return arr;
-//}
-
-//int[] aa = reverseArray(a);
-//foreach (var item in aa)
-//{
-//    Console.WriteLine(item);
-//}
-
-
-
-
 int[] aa2 = [13, 34, 2, 34, 33, 1];
+int[] a2 = [13, 34, 2, 0, 33, -1,-2];
 
 int max(int[] arr)
 {
@@ -88,5 +65,8 @@ int max(int[] arr)
 }
 
 int aa = max(aa2);
+
+int a =FindMin.min(a2);
+Console.WriteLine(a);
 
 
