@@ -17,11 +17,14 @@ namespace Algoritm_Practice.AlgosNDataStructures
 
             int sum = n * (n + 1) / 2;
 
-            for (int i = 0; i < arr.Length; i++)
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    sum = sum - arr[i];
+            //}
+            foreach (int num in arr) 
             {
-                sum = sum - arr[i];
+                sum = sum - num;
             }
-
             return sum;
         }
     }
