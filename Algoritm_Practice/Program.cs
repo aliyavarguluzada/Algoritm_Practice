@@ -38,7 +38,11 @@ bool IsPrime(int number)
 
 //Console.WriteLine(IsPrime(11));
 
-int[] a = [2, 4, 1, 8, 6, 3, 7];
+string a = "madam";
+string b = "ad";
 
-int num = FindTheMissingNumber.Find(a);
-Console.WriteLine(num);
+bool aa = StringPalindrome.isPalindrome(a);
+bool bb = StringPalindrome.isPalindrome(b);
+
+Console.WriteLine(aa);
+Console.WriteLine(bb);
