@@ -38,5 +38,9 @@ bool IsPrime(int number)
 
 //Console.WriteLine(IsPrime(11));
 
+int[] a = [1, 2, 3, 4, 5];
 
+int[] aa = ResizeArray.resize(a,7);
 
+Console.WriteLine("a");
+Console.ReadLine();
