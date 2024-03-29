@@ -38,9 +38,7 @@ bool IsPrime(int number)
 
 //Console.WriteLine(IsPrime(11));
 
-int[] a = [1, 2, 3, 4, 5];
+int[] a = [2, 4, 1, 8, 6, 3, 7];
 
-int[] aa = ResizeArray.resize(a,7);
-
-Console.WriteLine("a");
-Console.ReadLine();
+int num = FindTheMissingNumber.Find(a);
+Console.WriteLine(num);
