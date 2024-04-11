@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algoritm_Practice
+namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
 {
     public class Node<T>
     {
         public T Data { get; set; }
+        
         public Node<T> Next { get; set; }
 
         public Node(T data)
@@ -17,5 +18,6 @@ namespace Algoritm_Practice
             Next = null;
         }
 
+       
     }
 }
