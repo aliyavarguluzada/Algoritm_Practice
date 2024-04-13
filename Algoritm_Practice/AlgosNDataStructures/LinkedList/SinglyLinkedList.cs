@@ -8,7 +8,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
 {
-    public class SinglyLinkedList<T>
+    public class SinglyLinkedList<T> where T : IComparable<T>
     {
         public Node<T> Head { get; set; }
         public int Count
@@ -141,6 +141,22 @@ namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
                 previous.Next = current.Next;
             }
 
+        }
+
+        public bool SearchElement(T searchKey)
+        {
+            Node<T> current = Head;
+
+            while (current != null)
+            {
+                // if (current.Data == searchKey)
+                if (current.Data.Equals(searchKey))
+                    return true;
+
+                current = current.Next;
+            }
+
+            return false;
         }
         private int NodeCount()
         {
