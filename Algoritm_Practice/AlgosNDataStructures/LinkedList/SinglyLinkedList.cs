@@ -158,6 +158,31 @@ namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
 
             return false;
         }
+
+
+        public Node<T> Reverse()
+        {
+            Node<T> current = Head;
+
+            Node<T> previous = null;
+
+            Node<T> next = null;
+
+            while (current != null)
+            {
+                next = current.Next;
+                current.Next = previous;
+
+                previous = current;
+
+                current = next;
+
+            }
+            return previous;
+        }
+
+
+
         private int NodeCount()
         {
             Node<T> current = Head;
