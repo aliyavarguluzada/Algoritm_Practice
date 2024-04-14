@@ -162,6 +162,9 @@ namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
 
         public Node<T> Reverse()
         {
+            if (Head == null)
+                return Head;
+
             Node<T> current = Head;
 
             Node<T> previous = null;
@@ -181,7 +184,23 @@ namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
             return previous;
         }
 
+        public Node<T> FindNthNode(int n)
+        {
+            if (Head == null || n <= 0)
+                return null;
 
+            Node<T> current = Head;
+            int count = 1;
+
+            while (current != null && count < n)
+            {
+                current = current.Next;
+                count++;
+            }
+
+
+            return current;
+        }
 
         private int NodeCount()
         {
