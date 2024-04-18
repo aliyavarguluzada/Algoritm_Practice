@@ -21,9 +21,10 @@ using Algoritm_Practice.Leetcode;
 //Console.WriteLine(y);
 
 
-int[] nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
-
-int a = RemoveDuplicatesFromSortedArray.Remove(nums);
-
+int[] nums = [0, 1, 2, 2, 3, 0, 4, 2];
+int[] numss = [3, 2, 2, 3,123];
+int a = RemoveElement.removeElement(nums, 2);
+//int b = RemoveElement.removeElement(numss, 3);
 
 Console.WriteLine(a);
+//Console.WriteLine(b);

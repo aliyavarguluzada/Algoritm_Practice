@@ -10,24 +10,31 @@ namespace Algoritm_Practice.Leetcode
     {
         public static int removeElement(int[] nums, int val)
         {
-            int[] x = new int[nums.Length];
+
+            // Input: nums = [3, 2, 2, 3], val = 3
+            // Output: 2, nums = [2, 2, _, _]
+
+            // Input: nums = [0, 1, 2, 2, 3, 0, 4, 2], val = 2
+            // Output: 5, nums = [0, 1, 4, 0, 3, _, _, _]
 
             int k = 0;
+            int j = 0;
 
-            foreach (var item in nums)
+            for (int i = 0; i < nums.Length; i++)
             {
-                if (item != val)
-                {
-                    x[k] = item;
+                if (nums[i] != val)
                     k++;
 
-                }
+                if (nums[i] != val && nums[j] == val)
+                {
+                    int temp = nums[i];
 
-                return k;
-            }
-            for (int i = 0; i < x.Length; i++)
-            {
-                nums[i] = x[i];
+                    nums[i] = nums[j];
+                    
+                    nums[j] = temp;
+                }
+                if (nums[j] != val)
+                    j++;
             }
 
             return k;
