@@ -14,8 +14,16 @@ using Algoritm_Practice.Leetcode;
 
 
 
-bool x = ValidAnagram.validAnagram("anagram", "nagaram");
-bool y = ValidAnagram.validAnagram("car", "rat");
+//bool x = ValidAnagram.validAnagram("anagram", "nagaram");
+//bool y = ValidAnagram.validAnagram("car", "rat");
 
-//Console.WriteLine(x);   
-Console.WriteLine(y);   
+////Console.WriteLine(x);   
+
+//Console.WriteLine(y);
+
+int[] nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+
+
+int k = RemoveDuplicatesFromSortedArray.RemoveDuplicates(nums);
+
+Console.WriteLine(k);   
