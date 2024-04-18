@@ -14,7 +14,9 @@ namespace Algoritm_Practice.Leetcode
             // Output: 5, nums = [0, 1, 2, 3, 4, _, _, _, _, _]
 
             int k = 0;
+           
             HashSet<int> uniques = nums.ToHashSet();
+           
             int[] a = uniques.ToArray();
 
             int count = 0;
@@ -32,9 +34,7 @@ namespace Algoritm_Practice.Leetcode
 
             }
 
-
             k = uniques.Count();
-
 
             return k;
         }
