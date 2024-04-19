@@ -12,19 +12,14 @@ using Algoritm_Practice.Leetcode;
 //Console.WriteLine(count);
 
 
+int[] nums = [1, 2, 3, 4, 5, 6, 7];
+
+int[] n = [1, 2];
+
+RotateArray.Rotate(n, 5);
 
 
-//bool x = ValidAnagram.validAnagram("anagram", "nagaram");
-//bool y = ValidAnagram.validAnagram("car", "rat");
-
-////Console.WriteLine(x);   
-//Console.WriteLine(y);
 
 
-int[] nums = [0, 1, 2, 2, 3, 0, 4, 2];
-int[] numss = [3, 2, 2, 3,123];
-int a = RemoveElement.removeElement(nums, 2);
-//int b = RemoveElement.removeElement(numss, 3);
 
-Console.WriteLine(a);
-//Console.WriteLine(b);
+
