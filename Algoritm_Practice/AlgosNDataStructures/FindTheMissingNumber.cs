@@ -13,7 +13,7 @@ namespace Algoritm_Practice.AlgosNDataStructures
 
             // Sum of first natural numbers S = n(n + 1)/2
 
-            int n = arr.Length + 1;
+            int n = arr.Length;
 
             int sum = n * (n + 1) / 2;
 
@@ -21,7 +21,7 @@ namespace Algoritm_Practice.AlgosNDataStructures
             //{
             //    sum = sum - arr[i];
             //}
-            foreach (int num in arr) 
+            foreach (int num in arr)
             {
                 sum = sum - num;
             }

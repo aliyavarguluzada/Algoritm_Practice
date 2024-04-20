@@ -12,14 +12,42 @@ using Algoritm_Practice.Leetcode;
 //Console.WriteLine(count);
 
 
-int[] nums = [1, 2, 3, 4, 5, 6, 7];
 
-int[] n = [1, 2];
+int[] nums = [1, 2, 3, 4, 5];
+int[] nums1 = [5, 4, 3, 2, 1];
+int[] nums2 = [1, 2, 2, 4, 6, 2, 1, 4];
 
-RotateArray.Rotate(n, 5);
+int[] numss = [1, 3, 2];
+
+int[] n = [1, 1, 0];
+
+//MonotonicArray.IsMonotonic(nums);
+//MonotonicArray.IsMonotonic(nums1);
+//MonotonicArray.IsMonotonic(numss);
+//MonotonicArray.IsMonotonic(n);
+
+
+int[] num = [1, 1, 2, 2, 3, 4];
+
+
+//SplitTheArray.IsPossibleToSplit(num);
+
+
+int AddDigits(int num)
+{
+    int k = 0;
+
+    while (num > 10)
+    {
+        int n1 = num % 10;
+        int s = num - n1;
+        int n2 = num / 10;
+        k = n1 + n2;
+        num = k;
+    }
+    return k;
+}
 
 
 
-
-
-
+Console.WriteLine(AddDigits(38));
