@@ -32,8 +32,7 @@ int[] num = [1, 1, 2, 2, 3, 4];
 
 //SplitTheArray.IsPossibleToSplit(num);
 
-int[] ums = [1, 3, 4, 2, 2];
+int[] a = [1, 3, 4, 6];
 
 
-FindTheDuplicateNumber.FindDuplicate(ums);
-
+SearchInsertPosition.SearchInsert(a,7);
