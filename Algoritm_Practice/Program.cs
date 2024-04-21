@@ -21,7 +21,7 @@ int[] numss = [1, 3, 2];
 
 int[] n = [1, 1, 0];
 
-//MonotonicArray.IsMonotonic(nums);
+MonotonicArray.IsMonotonic(nums);
 //MonotonicArray.IsMonotonic(nums1);
 //MonotonicArray.IsMonotonic(numss);
 //MonotonicArray.IsMonotonic(n);
@@ -32,22 +32,3 @@ int[] num = [1, 1, 2, 2, 3, 4];
 
 //SplitTheArray.IsPossibleToSplit(num);
 
-
-int AddDigits(int num)
-{
-    int k = 0;
-
-    while (num > 10)
-    {
-        int n1 = num % 10;
-        int s = num - n1;
-        int n2 = num / 10;
-        k = n1 + n2;
-        num = k;
-    }
-    return k;
-}
-
-
-
-Console.WriteLine(AddDigits(38));

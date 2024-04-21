@@ -26,30 +26,27 @@ namespace Algoritm_Practice.Leetcode
             // Output: false
 
 
-            bool[] cases = new bool[nums.Length - 1];
+            bool increasing = true;
 
-            int i = 0;
-            int j = 1;
-
+            bool decreasing = true;
 
 
-
-
-
-            while (nums[i] <= nums[j])
+            for (int i = 0; i < nums.Length - 1; i++)
             {
 
+                if (nums[i] > nums[i + 1])
+                    increasing = false;
+
+                if (nums[i] < nums[i + 1])
+                    decreasing = false;
+
+                // if it is not increasing or decreasing return false
+                if (increasing == false && decreasing == false)
+                    return false;
+
             }
-           
 
-            bool ans = cases.All(x => x == true);
-
-
-            if (ans == true)
-                return true;
-
-
-            return false;
+            return true;
         }
     }
 }

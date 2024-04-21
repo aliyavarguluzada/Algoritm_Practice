@@ -11,6 +11,7 @@ namespace Algoritm_Practice.Leetcode
         public static int AddDigit(int num)
         {
             int k = 0;
+
             if (num == 10)
                 return 1;
 
