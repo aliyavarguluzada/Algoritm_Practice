@@ -13,26 +13,14 @@ using Algoritm_Practice.Leetcode;
 
 
 
-int[] nums = [1, 2, 3, 4, 5];
-int[] nums1 = [5, 4, 3, 2, 1];
-int[] nums2 = [1, 2, 2, 4, 6, 2, 1, 4];
-
-int[] numss = [1, 3, 2];
-
-int[] n = [1, 1, 0];
-
-MonotonicArray.IsMonotonic(nums);
-//MonotonicArray.IsMonotonic(nums1);
-//MonotonicArray.IsMonotonic(numss);
-//MonotonicArray.IsMonotonic(n);
+int[] nums = [1, 4, 3, 2];
 
 
-int[] num = [1, 1, 2, 2, 3, 4];
+int a = ArrayPartition.ArrayPairSum(nums);
+
+Console.WriteLine(a);
 
 
-//SplitTheArray.IsPossibleToSplit(num);
-
-int[] a = [1, 3, 4, 6];
 
 
-SearchInsertPosition.SearchInsert(a,7);
+
