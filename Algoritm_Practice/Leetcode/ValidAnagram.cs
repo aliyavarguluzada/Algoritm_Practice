@@ -22,8 +22,6 @@ namespace Algoritm_Practice.Leetcode
             Array.Sort(ss);
             Array.Sort(tt);
 
-            string s1 = new string(ss);
-            string s2 = new string(tt);
 
             bool a = true;
 
