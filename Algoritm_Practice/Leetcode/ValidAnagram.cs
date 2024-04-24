@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Algoritm_Practice.HackerRank;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -24,11 +25,21 @@ namespace Algoritm_Practice.Leetcode
             string s1 = new string(ss);
             string s2 = new string(tt);
 
-            //if (
-                //return true;
+            bool a = true;
+
+            for (int i = 0; i < ss.Length; i++)
+            {
+                if (ss[i] == tt[i])
+                    a = true;
+                else
+                {
+                    a = false;
+                    break;
+                }
+            }
 
 
-            return false;
+            return a;
         }
     }
 }

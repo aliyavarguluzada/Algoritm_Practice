@@ -1,15 +1,5 @@
 ﻿
 using Algoritm_Practice.Leetcode;
 
-int a = ReverseInteger.Reverse(900000);
-
+bool a = ValidAnagram.validAnagram("anagram","nagaram");
 Console.WriteLine(a);   
-
-
-
-
-
-
-
-
-
