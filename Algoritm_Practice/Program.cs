@@ -1,5 +1,5 @@
-﻿
-using Algoritm_Practice.Leetcode;
+﻿using Algoritm_Practice.Leetcode;
 
-bool a = ValidAnagram.validAnagram("anagram","nagaram");
-Console.WriteLine(a);   
+int[] a = [2, 3, 7, 9];
+
+TwoSum.TwoSumOptimized(a, 9);

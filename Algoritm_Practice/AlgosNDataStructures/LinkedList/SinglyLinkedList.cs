@@ -202,6 +202,44 @@ namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
             return current;
         }
 
+        public Node<T> getNthNodeFromEnd(int n)
+        {
+            if (Head == null)
+                return null;
+
+            if (n <= 0)
+                throw new ArgumentOutOfRangeException();
+
+            Node<T> mainPtr = Head;
+            Node<T> refPtr = Head;
+
+            int count = 0;
+
+            while (count < n)
+            {
+                if (refPtr == null)
+                    throw new ArgumentNullException();
+
+                refPtr = refPtr.Next;
+                count++;
+            }
+
+            while (refPtr != null)
+            {
+                refPtr = refPtr.Next;
+
+                mainPtr = mainPtr.Next;
+
+            }
+            return mainPtr;
+        }
+
+
+
+
+
+
+
         private int NodeCount()
         {
             Node<T> current = Head;
