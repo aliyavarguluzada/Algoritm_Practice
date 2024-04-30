@@ -259,6 +259,26 @@ namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
         }
 
 
+        public Node<T> InsertNodeSortedList(Node<T> newNode)
+        {
+            Node<T> current = Head;
+            Node<T> temp = null;
+
+            // current.Data < newNode.Data
+
+            while (current != null && current.Data.CompareTo(newNode.Data) < 0)
+            {
+                temp = current;
+                current = current.Next;
+            }
+
+            newNode.Next = current;
+            temp.Next = newNode;
+
+            return Head;
+        }
+
+
         private int NodeCount()
         {
             Node<T> current = Head;
