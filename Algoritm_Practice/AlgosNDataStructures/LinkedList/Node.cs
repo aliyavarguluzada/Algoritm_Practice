@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
 {
-    public class Node<T>
+    public class Node<T> where T : IComparable<T>
     {
         public T Data { get; set; }
         
