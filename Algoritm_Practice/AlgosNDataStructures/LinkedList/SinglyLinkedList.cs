@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -239,7 +240,23 @@ namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
 
 
 
+        public void removeDuplicateFromSortedList()
+        {
+            Node<T> current = Head;
 
+            while (current != null && current.Next != null)
+            {
+                //if(current.Data == current.Next.Data)
+                if (current.Data.Equals(current.Next.Data))
+                {
+                    current.Next = current.Next.Next;
+                }
+                else
+                {
+                    current = current.Next;
+                }
+            }
+        }
 
 
         private int NodeCount()
@@ -257,9 +274,6 @@ namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
                 current = current.Next;
             }
 
-
-
-            //Console.WriteLine(Count);
             return count;
         }
 
