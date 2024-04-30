@@ -213,6 +213,8 @@ namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
             Node<T> mainPtr = Head;
             Node<T> refPtr = Head;
 
+
+
             int count = 0;
 
             while (count < n)
