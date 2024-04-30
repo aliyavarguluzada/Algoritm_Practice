@@ -261,9 +261,7 @@ namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
 
         public Node<T> InsertNodeSortedList(T data)
         {
-            Node<T> newNode = new(data);
-            
-            newNode.Next = null;
+            Node<T> newNode = new(data) { Next = null };
 
             if (Head == null || Head.Data.CompareTo(data) >= 0)
             {
@@ -282,6 +280,24 @@ namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
             }
 
             return Head;
+        }
+
+
+        public Node<T> DeleteNodeContainingKey(T key)
+        {
+            Node<T> current = Head;
+
+            while (current != null && !current.Next.Data.Equals(key))
+            {
+                current = current.Next;
+
+            }
+            if (current == null)
+                return current;
+            current.Next = current.Next.Next;
+
+            return current;
+
         }
 
 
