@@ -4,17 +4,17 @@ SinglyLinkedList<int> list = new SinglyLinkedList<int>();
 
 list.AddNodeBack(1);
 list.AddNodeBack(2);
+list.AddNodeBack(6);
+list.AddNodeBack(6);
 list.AddNodeBack(4);
+list.AddNodeBack(5);
+list.AddNodeBack(3);
 
-
-list.InsertNodeSortedList(3);
-
-list.InsertNodeSortedList(5);
 
 
 //list.PrintList();
 
-list.DeleteKey(2);
+list.removeDuplicateFromSortedList();
 
 list.PrintList();
 

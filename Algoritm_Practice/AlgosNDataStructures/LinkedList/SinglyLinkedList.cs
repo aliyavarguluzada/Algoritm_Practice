@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
-namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
+﻿namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
 {
     public class SinglyLinkedList<T> where T : IComparable<T>
     {
@@ -292,12 +283,33 @@ namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
                 current = current.Next;
 
             }
+
             if (current == null)
                 return current;
+
             current.Next = current.Next.Next;
 
             return current;
 
+        }
+
+        public bool ContainsLoop()
+        {
+            Node<T> fastPtr = Head;
+
+            Node<T> slowPtr = Head;
+
+            while (fastPtr != null && fastPtr.Next != null)
+            {
+                fastPtr = fastPtr.Next.Next;
+
+                slowPtr = slowPtr.Next;
+
+                if (slowPtr == fastPtr)
+                    return true;
+            }
+
+            return false;
         }
 
 
