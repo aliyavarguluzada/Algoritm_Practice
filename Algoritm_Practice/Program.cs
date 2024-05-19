@@ -1,20 +1,17 @@
-﻿using Algoritm_Practice.AlgosNDataStructures.LinkedList;
+﻿
+using Algoritm_Practice.HackerRank;
 
-SinglyLinkedList<int> list = new SinglyLinkedList<int>();
+//int number = 5;
+//int result = number++ + ++number + ++number;
 
-list.AddNodeBack(1);
-list.AddNodeBack(2);
-list.AddNodeBack(6);
-list.AddNodeBack(6);
-list.AddNodeBack(4);
-list.AddNodeBack(5);
-list.AddNodeBack(3);
+//Console.WriteLine(result);
+//Console.WriteLine(number);
 
 
+List<int> list = [2, 8, 6, 8, 4];
+List<int> list1 = [1, 3, 2, 6, 1, 2,];
 
-//list.PrintList();
+int a = DivisibleSumPairs.divisibleSumPairs(6, 3, list1);
 
-list.removeDuplicateFromSortedList();
 
-list.PrintList();
-
+Console.WriteLine(a);
