@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Algoritm_Practice.AlgosNDataStructures
+﻿namespace Algoritm_Practice.AlgosNDataStructures
 {
     public static class StringPalindrome
     {
@@ -15,17 +9,23 @@ namespace Algoritm_Practice.AlgosNDataStructures
             int start = 0;
             int end = chars.Length - 1;
 
+            bool a = false;
+
             while (start < end)
             {
                 if (chars[start] == chars[end])
                 {
-                    return true;
+                    a = true;
+                }
+                else
+                {
+                    return false;
                 }
                 start++;
                 end--;
             }
 
-            return false;
+            return a;
         }
     }
 }
