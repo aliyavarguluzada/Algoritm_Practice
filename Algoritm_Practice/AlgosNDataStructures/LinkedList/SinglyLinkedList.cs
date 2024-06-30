@@ -1,6 +1,4 @@
-﻿using System.Xml;
-
-namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
+﻿namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
 {
     public class SinglyLinkedList<T> where T : IComparable<T>
     {
@@ -360,5 +358,35 @@ namespace Algoritm_Practice.AlgosNDataStructures.LinkedList
             return count;
         }
 
+        public void RemoveLoop()
+        {
+            Node<T> fastPtr = Head;
+            Node<T> slowPtr = Head;
+
+            while (fastPtr != null && fastPtr.Next != null)
+            {
+                fastPtr = fastPtr.Next.Next;
+                slowPtr = slowPtr.Next;
+
+                if (slowPtr == fastPtr)
+                {
+                    removeLoop(slowPtr);
+                    return;
+                }
+            }
+        }
+
+        private void removeLoop(Node<T> slowPtr)
+        {
+            Node<T> temp = Head;
+
+            while (slowPtr.Next != temp.Next)
+            {
+                temp = temp.Next;
+                slowPtr = slowPtr.Next;
+            }
+
+            slowPtr.Next = null;
+        }
     }
 }
