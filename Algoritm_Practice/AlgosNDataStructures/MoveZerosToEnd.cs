@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Algoritm_Practice.AlgosNDataStructures
+﻿namespace Algoritm_Practice.AlgosNDataStructures
 {
     public static class MoveZerosToEnd
     {
         public static int[] moveZerosToEnd(int[] arr)
         {
+            //int[] nums = [0, 0, 0, -1, -2, 1, 4, 8];
+
             int j = 0;
+
             for (int i = 0; i < arr.Length; i++)
             {
                 if (arr[i] != 0 && arr[j] == 0)

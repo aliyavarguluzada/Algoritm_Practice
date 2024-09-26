@@ -1,7 +1,6 @@
 ﻿using Algoritm_Practice.Leetcode;
 
-int[] nums = [-1, -2, 1, 4, 8];
 
-int a = FindClosestNumberToZero.FindClosestNumber(nums);
+string[] strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
 
-Console.WriteLine(a);
+GroupAnagrams.groupAnagrams(strs);
