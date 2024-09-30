@@ -6,7 +6,7 @@
         {
             int result = 0;
 
-            for (int i = 0; i + 1 < s.Length; i++)
+            for (int i = 0; i < s.Length-1; i++)
             {
                 if (getInt(s[i]) < getInt(s[i + 1]))
                     result -= getInt(s[i]);
