@@ -6,7 +6,7 @@
         {
             int result = 0;
 
-            for (int i = 0; i < s.Length-1; i++)
+            for (int i = 0; i < s.Length - 1; i++)
             {
                 if (getInt(s[i]) < getInt(s[i + 1]))
                     result -= getInt(s[i]);
@@ -19,14 +19,14 @@
         }
         private static int getInt(char s)
         {
-            Dictionary<string, int> values = new Dictionary<string, int>() {
-                                                                { "I", 1 },
-                                                                { "V",5},
-                                                                { "X",10},
-                                                                { "L",50},
-                                                                { "C",100},
-                                                                { "D", 500},
-                                                                { "M",1000}  };
+            Dictionary<char, int> values = new Dictionary<char, int>() {
+                                                                { 'I', 1 },
+                                                                { 'V',5},
+                                                                { 'X',10},
+                                                                { 'L',50},
+                                                                { 'C',100},
+                                                                { 'D', 500},
+                                                                { 'M',1000}  };
 
             switch (s)
             {
