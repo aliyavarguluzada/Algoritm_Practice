@@ -82,7 +82,6 @@ namespace Algoritm_Practice.Leetcode
 
             return x;
 
-            return x;
         }
     }
 }
