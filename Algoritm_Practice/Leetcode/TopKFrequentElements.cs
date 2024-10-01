@@ -8,23 +8,20 @@
             if (nums.Length == 1)
                 return nums;
 
-            Dictionary<int, int> values = new Dictionary<int, int>();
+            Dictionary<int, int> frequency = new Dictionary<int, int>();
 
-            for (int i = 0; i < nums.Length; i++)
+            foreach (var num in nums)
             {
-                int count = nums.Count(c => c == nums[i]);
-
-
-                if (values.ContainsKey(nums[i]))
-                    values[nums[i]] = count;
+                if (frequency.ContainsKey(num))
+                    frequency[num]++;
                 else
-                    values.Add(nums[i], count);
+                    frequency[num] = 1;
             }
 
-            var topKeys = values.OrderByDescending(x => x.Value)
-                                .Take(k)
-                                .Select(x => x.Key)
-                                .ToArray();
+            var topKeys = frequency.OrderByDescending(x => x.Value)
+                    .Take(k)
+                    .Select(x => x.Key)
+                    .ToArray();
 
             return topKeys;
         }
