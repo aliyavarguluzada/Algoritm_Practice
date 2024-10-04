@@ -25,6 +25,7 @@
                 }
             }
 
+            List<string>[] strings = dict.Values.ToArray();
             return dict.Values.ToArray();
         }
     }
