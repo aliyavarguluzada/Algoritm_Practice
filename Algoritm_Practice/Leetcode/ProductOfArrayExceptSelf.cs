@@ -8,38 +8,36 @@
             // Output: [24, 12, 8, 6]
             // int[] x = [-1, 1, 0, -3, 3];
 
-            int[] k = new int[nums.Length];
+
+            int[] left = new int[nums.Length];
+
+            int[] right = new int[nums.Length];
+
+            int[] result = new int[nums.Length];
+
+            left[0] = 1;
+
+            for (int i = 1; i < nums.Length; i++)
+            {
+                left[i] = left[i - 1] * nums[i - 1];
+            }
+
+            right[nums.Length - 1] = 1;
+
+            for (int i = nums.Length - 2; i > -1; i--)
+            {
+                right[i] = right[i + 1] * nums[i + 1];
+            }
 
             for (int i = 0; i < nums.Length; i++)
             {
-
-                int num = 1;
-
-                if (nums is [0, 0])
-                    return nums;
-
-                for (int j = 0; j < nums.Length; j++)
-                {
-                    if (nums[i] != 0)
-                        num = Product(nums) / nums[i];
-                    else
-                    {
-                        if (nums[j] == 0)
-                            continue;
-                        num *= nums[j];
-                    }
-                }
-
-                k[i] = num;
+                result[i] = left[i] * right[i];
             }
-            return k;
+
+            return result;
 
         }
 
-        private static int Product(int[] nums)
-        {
 
-            return nums.Aggregate(1, (a, b) => a * b);
-        }
     }
 }
