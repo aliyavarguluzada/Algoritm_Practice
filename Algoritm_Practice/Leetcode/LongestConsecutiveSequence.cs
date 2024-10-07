@@ -16,9 +16,10 @@
 
             if (nums is [])
                 return 0;
-            
+
             if (nums is [0, 0])
                 return 1;
+
             List<int> list = new List<int>();
 
             for (int i = 0; i < nums.Length - 1; i++)
@@ -39,6 +40,12 @@
             }
 
             return list.Max();
+        }
+
+
+        public static int LongestConsecutiveOp(int[] nums)
+        {
+            return -1;
         }
     }
 }
