@@ -1,6 +1,8 @@
-﻿using Algoritm_Practice.Leetcode;
+﻿
 
-int[] nums = [-1, 0, 1, 2, -1, -4];
+using Algoritm_Practice.Leetcode;
+
+int[] a = [2, 7, 11, 15];
 
 
-_3Sum.ThreeSum(nums);
+TwoSumIIInputArrayIsSorted.TwoSum(a,9);
