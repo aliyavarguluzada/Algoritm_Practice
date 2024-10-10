@@ -1,6 +1,4 @@
-﻿using System.Collections.Immutable;
-
-namespace Algoritm_Practice.Leetcode
+﻿namespace Algoritm_Practice.Leetcode
 {
     public static class TwoSumIIInputArrayIsSorted
     {
@@ -15,22 +13,39 @@ namespace Algoritm_Practice.Leetcode
             for (int i = 0; i < numbers.Length; i++)
             {
 
-                for (int j = i+1; j < numbers.Length - 1; j++)
+                for (int j = i + 1; j < numbers.Length - 1; j++)
                 {
                     if (numbers[i] + numbers[j] == target)
                     {
                         result[0] = i + 1;
                         result[1] = j + 1;
                     }
-                        
-
-
                 }
             }
 
-
-
             return result;
+        }
+
+
+        public static int[] TwoSumOp(int[] numbers, int target)
+        {
+
+            int left = 0;
+            int right = numbers.Length - 1;
+
+
+            while (left < right)
+            {
+                if (numbers[left] + numbers[right] == target)
+                    return new int[] { left + 1, right + 1 };
+                else if (numbers[left] + numbers[right] < target)
+                    left++;
+                else
+                    right--;
+            }
+
+            return new int[] { };
+
         }
     }
 }
