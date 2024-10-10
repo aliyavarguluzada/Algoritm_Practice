@@ -10,10 +10,6 @@ namespace Algoritm_Practice.Leetcode
             // nums = [2, 7, 11, 15] target = 9;
             // nums = [2, 3, 4] target = 6;
 
-            //int j = 1;
-
-            if (target == 0)
-                return [];
 
             int[] result = new int[2];
             for (int i = 0; i < numbers.Length; i++)
