@@ -1,11 +1,8 @@
 ﻿
 using Algoritm_Practice.Leetcode;
+using C_.Leetcode;
 
-int[] a = [2,3,7,9,6];
+int[] prices = [7, 1, 5, 3, 6, 4];
 
-int[] v= TwoSum.TwoSumOp(a,9);
-
-foreach(int i in v)
-{
-    Console.WriteLine(i);   
-}
+int v = BestTimetoBuyandSellStock.MaxProfit(prices);
+Console.WriteLine(v);
