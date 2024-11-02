@@ -2,7 +2,9 @@
 using Algoritm_Practice.Leetcode;
 using C_.Leetcode;
 
-string s = "pwwkew";
+string a = "(){}}{";
 
-int a = LongestSubstringWithoutRepeatingCharacters.LengthOfLongestSubstring(s);
-Console.WriteLine(a);
+
+bool v = ValidParentheses.IsValid(a);
+
+Console.WriteLine(v);
