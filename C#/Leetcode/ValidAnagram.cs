@@ -31,8 +31,10 @@ namespace Algoritm_Practice.Leetcode
                     a = true;
                 else
                 {
-                    a = false;
-                    break;
+                    //a = false;
+                    //break; returning false right away is better
+                    return false;
+
                 }
             }
 

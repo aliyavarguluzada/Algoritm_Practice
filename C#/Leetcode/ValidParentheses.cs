@@ -41,5 +41,30 @@
 
             return false;
         }
+
+        public static bool IsValidLT(string s)
+        {
+            Dictionary<char, char> pairs = new Dictionary<char, char>()
+            {
+                {'(', ')'},
+                {'[', ']'},
+                {'{', '}'}
+            };
+
+            Stack<char> stack = new Stack<char>();
+
+            for (int i = 0; i < s.Length; i++)
+            {
+
+                if (pairs.ContainsKey(s[i])) { stack.Push(pairs[s[i]]); }
+                else
+                {
+                    if (stack.Count() == 0) { return false; }
+
+                    if (stack.Pop() != s[i]) { return false; }
+                }
+            }
+            return stack.Count == 0;
+        }
     }
 }
