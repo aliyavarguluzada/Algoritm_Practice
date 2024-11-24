@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Algoritm_Practice.AlgosNDataStructures
+﻿namespace Algoritm_Practice.AlgosNDataStructures
 {
     public static class FindTheMissingNumber
     {
@@ -26,6 +20,23 @@ namespace Algoritm_Practice.AlgosNDataStructures
                 sum = sum - num;
             }
             return sum;
+        }
+        public static int Missing(int[] arr)
+        {
+            Array.Sort(arr);
+            int missing = arr[0];
+
+            for (global::System.Int32 i = 0; i < arr.Length - 1; i++)
+            {
+                if (arr[i] == arr[i + 1] - 1)
+                    continue;
+                else
+                {
+                    missing = arr[i] + 1;
+                }
+            }
+            return missing;
+
         }
     }
 }

@@ -1,11 +1,17 @@
 ﻿
-
-
 using C_.Leetcode;
 
-int[] nums = [1, 2, 3, 1, 2, 3];
+int[][] arr = [[ 1, 2, 3, 4 ],
+                [ 5, 1, 2, 3 ],
+                [ 9, 5, 1, 2]];
+
+int[][] aee = [[1,2],
+               [2,2]];
 
 
-bool a = ContainsDuplicateII.ContainsNearbyDuplicate(nums, 3);
+bool a = ToeplitzMatrix.IsToeplitzMatrix(arr);
+bool b = ToeplitzMatrix.IsToeplitzMatrix(aee);
 
-Console.WriteLine(a);
+Console.WriteLine(b);
+
+

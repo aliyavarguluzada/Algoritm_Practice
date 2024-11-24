@@ -17,18 +17,18 @@
                 return n;
 
             int previous = 0;
-            int next = 1;
+            int current = 1;
 
 
             for (int i = 1; i < n; i++) // you can start from 2 and make i <= n because of if statement above but this one has better memory performance and similar speed 
             {
-                int sequenceNumber = previous + next;
+                int next = previous + current;
 
-                previous = next;
-                next = sequenceNumber;
+                previous = current;
+                current = next;
 
             }
-            return next;
+            return current;
 
         }
     }
