@@ -8,10 +8,19 @@ int[][] arr = [[ 1, 2, 3, 4 ],
 int[][] aee = [[1,2],
                [2,2]];
 
+MinStack minStack = new MinStack();
 
-bool a = ToeplitzMatrix.IsToeplitzMatrix(arr);
-bool b = ToeplitzMatrix.IsToeplitzMatrix(aee);
 
-Console.WriteLine(b);
+minStack.Push(1);
+minStack.Push(2);
+minStack.Push(3);
+minStack.Push(4);
+minStack.Push(5);
+
+
+minStack.Push(6);
+
+minStack.Pop();
+Console.ReadLine();
 
 
