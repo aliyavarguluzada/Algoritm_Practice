@@ -1,26 +1,29 @@
 ﻿
+
+
 using C_.Leetcode;
 
-int[][] arr = [[ 1, 2, 3, 4 ],
-                [ 5, 1, 2, 3 ],
-                [ 9, 5, 1, 2]];
+int[] temperatures = [73, 74, 75, 71, 69, 72, 76, 73];
+int[] temp = [30, 40, 50, 60];
 
-int[][] aee = [[1,2],
-               [2,2]];
-
-MinStack minStack = new MinStack();
+int[] a = DailyTemperatures.DailyTemperaturesS(temp);
 
 
-minStack.Push(1);
-minStack.Push(2);
-minStack.Push(3);
-minStack.Push(4);
-minStack.Push(5);
+foreach (int i in a)
+{
+    Console.WriteLine(i);
+}
 
 
-minStack.Push(6);
 
-minStack.Pop();
-Console.ReadLine();
+
+
+
+
+
+
+
+
+
 
 
