@@ -14,20 +14,15 @@
 
             for (int i = 0; i < temperatures.Length; i++)
             {
-                int day = 0;
 
                 for (global::System.Int32 j = i + 1; j < temperatures.Length; j++)
                 {
                     if (temperatures[i] < temperatures[j])
                     {
-                        day++;
-                        answers[i] = day;
+                        answers[i] = j - i;
                         break;
                     }
-                    else
-                    {
-                        day++;
-                    }
+
                 }
             }
 
