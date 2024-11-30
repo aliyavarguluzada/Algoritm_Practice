@@ -7,7 +7,7 @@
             int left = 0;
             int right = height.Length - 1;
 
-            int maxArea = 0; // area = with (right - left) * height (Min(left, right))
+            int maxArea = 0; // area = width (right - left) * height (Min(left, right))
 
 
             while (left < right)
