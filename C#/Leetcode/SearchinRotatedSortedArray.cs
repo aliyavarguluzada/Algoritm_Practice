@@ -38,7 +38,7 @@
             else
                 right = start;
 
-            while (left < right)
+            while (left <= right)
             {
                 int mid = left + (right - left) / 2;
                 if (nums[mid] == target)
