@@ -11,25 +11,26 @@
                 this.val = val;
                 this.next = next;
             }
-            public static ListNode ReverseList(ListNode head)
+        }
+        public static ListNode ReverseList(ListNode head)
+        {
+            if (head is null) return head;
+
+            ListNode curr = head;
+            ListNode prev = null;
+            ListNode next = null;
+
+            while (curr != null)
             {
-                if (head is null) return head;
+                next = curr.next;
+                curr.next = prev;
 
-                ListNode curr = head;
-                ListNode prev = null;
-                ListNode next = null;
+                prev = curr;
+                curr = next;
 
-                while (curr != null)
-                {
-                    next = curr.next;
-                    curr.next = prev;
-
-                    prev = curr;
-                    curr = next;
-
-                }
-                return prev;
             }
+            return prev;
         }
     }
 }
+
